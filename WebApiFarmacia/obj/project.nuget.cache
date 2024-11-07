@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NnaCH/Rfzcw=",
+  "dgSpecHash": "YSySCh5Gos8=",
   "success": true,
-  "projectFilePath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\WebApiFarmacia\\WebApiFarmacia.csproj",
+  "projectFilePath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\WebApiFarmacia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gabriel\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Gabriel\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

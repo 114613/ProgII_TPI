@@ -20,4 +20,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FarmaciaLibrary\FarmaciaLibrary.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj": {}
+    "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj": {}
   },
   "projects": {
-    "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj": {
+    "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj",
+        "projectUniqueName": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj",
         "projectName": "FarmaciaLibrary",
-        "projectPath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj",
+        "projectPath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj",
         "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-        "outputPath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\FarmaciaLibrary\\obj\\",
+        "outputPath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",

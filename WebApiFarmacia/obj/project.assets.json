@@ -1582,6 +1582,19 @@
             "rid": "win"
           }
         }
+      },
+      "FarmaciaLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
+        },
+        "compile": {
+          "bin/placeholder/FarmaciaLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FarmaciaLibrary.dll": {}
+        }
       }
     }
   },
@@ -4446,10 +4459,16 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "FarmaciaLibrary/1.0.0": {
+      "type": "project",
+      "path": "../FarmaciaLibrary/FarmaciaLibrary.csproj",
+      "msbuildProject": "../FarmaciaLibrary/FarmaciaLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "FarmaciaLibrary >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10",
@@ -4462,11 +4481,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\WebApiFarmacia\\WebApiFarmacia.csproj",
+      "projectUniqueName": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\WebApiFarmacia.csproj",
       "projectName": "WebApiFarmacia",
-      "projectPath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\WebApiFarmacia\\WebApiFarmacia.csproj",
+      "projectPath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\WebApiFarmacia.csproj",
       "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-      "outputPath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\WebApiFarmacia\\obj\\",
+      "outputPath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4483,7 +4502,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj": {
+              "projectPath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
