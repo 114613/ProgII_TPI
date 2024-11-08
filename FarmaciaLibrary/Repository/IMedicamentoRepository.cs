@@ -15,11 +15,12 @@ namespace FarmaciaLibrary.Repository
 
         //Devuelve si o si el medicamento si existe (no importa si esta inactivo)
         Medicamento? GetByName(string nombre);
-        void Create(Medicamento medicamento);
-        void Update(int id, Medicamento medicamento);
-        void Delete(int id); //Baja lógica
+        List<Medicamento>? GetByVencimiento(DateTime date); //busca un medicamento que vence antes de la fecha por parámetro
+        bool Create(Medicamento medicamento);
+        bool Update(int id, Medicamento medicamento);
+        bool Delete(int id); //Baja lógica
 
         //Devuelve todos los medicamentos que vencen antes de la fecha pasada por parámetro
-        List<Medicamento>? GetByDate(DateTime date);
+        
     }
 }

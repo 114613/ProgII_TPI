@@ -16,22 +16,30 @@ namespace FarmaciaLibrary.Repository
             _context = context;
         }
 
-        public void Create(Medicamento medicamento)
+        public bool Create(Medicamento medicamento)
         {
             if(medicamento != null)
             {
-                _context.Add(medicamento);
-                _context.SaveChanges();
+                _context.Medicamentos.Add(medicamento);
+                return _context.SaveChanges() > 0;
+            }
+            else
+            {
+                return false;
             }
         }
 
-        public void Delete(int id)
+        public bool Delete(int id)
         {
             var med = GetById(id);
             if (med != null)
             {
                 med.Activo = false;
-                _context.SaveChanges();
+                return _context.SaveChanges() > 0;
+            }
+            else
+            {
+                return false;
             }
         }
 
@@ -40,7 +48,7 @@ namespace FarmaciaLibrary.Repository
             return _context.Medicamentos.Where(m => m.Activo == true).ToList();
         }
 
-        public List<Medicamento>? GetByDate(DateTime date)
+        public List<Medicamento>? GetByVencimiento(DateTime date)
         {
             return _context.Medicamentos.Where(m => m.FechaVencimiento <= date && m.Activo == true && m.Cantidad > 0).ToList();
         }
@@ -55,7 +63,7 @@ namespace FarmaciaLibrary.Repository
             return _context.Medicamentos.FirstOrDefault(m => m.Nombre == nombre);
         }
 
-        public void Update(int id, Medicamento medicamento)
+        public bool Update(int id, Medicamento medicamento)
         {
             var med = _context.Medicamentos.Find(id);
             if(med != null)
@@ -68,7 +76,11 @@ namespace FarmaciaLibrary.Repository
                 med.Cantidad = medicamento?.Cantidad;
                 med.Activo = medicamento?.Activo;
 
-                _context.SaveChanges();
+                return _context.SaveChanges() > 0;
+            }
+            else
+            {
+                return false;
             }
         }
     }

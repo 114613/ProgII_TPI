@@ -20,7 +20,7 @@ namespace FarmaciaLibrary.Repository
         {
             if(cliente != null)
             {
-                _context.Add(cliente);
+                _context.Clientes.Add(cliente);
                 _context.SaveChanges();
             }
         }
