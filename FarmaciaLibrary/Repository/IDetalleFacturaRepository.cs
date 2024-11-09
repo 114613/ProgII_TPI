@@ -11,7 +11,7 @@ namespace FarmaciaLibrary.Repository
     {
         List<DetalleFactura> GetAll();
         DetalleFactura? GetById(int nro);
-        DetalleFactura? GetByFactura(int nroFactura);
+        List<DetalleFactura>? GetByFactura(int nroFactura); //Devuelve la lista de detalles del número de la factura pasada por parámetro
         bool Create(DetalleFactura detalle);
         bool Update(int nro, DetalleFactura detalle);
         bool Delete(int nro);

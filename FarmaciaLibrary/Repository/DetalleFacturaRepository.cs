@@ -48,9 +48,9 @@ namespace FarmaciaLibrary.Repository
             return _context.DetalleFacturas.ToList();
         }
 
-        public DetalleFactura? GetByFactura(int nroFactura)
+        public List<DetalleFactura>? GetByFactura(int nroFactura)
         {
-            return _context.DetalleFacturas.Where(d => d.NroFactura == nroFactura).FirstOrDefault();
+            return _context.DetalleFacturas.Where(d => d.NroFactura == nroFactura).ToList();
         }
 
         public DetalleFactura? GetById(int nro)

@@ -53,7 +53,7 @@ namespace FarmaciaLibrary.Repository
             return _context.Facturas.Where(f => f.IdCliente == id).ToList();
         }
 
-        public List<Factura>? GetByDate(DateTime date)
+        public List<Factura>? GetByDate(DateOnly date)
         {
             return _context.Facturas.Where(f => f.FechaVenta.Equals(date)).ToList();
         }

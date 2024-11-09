@@ -10,7 +10,7 @@ namespace FarmaciaLibrary.Repository
     public interface IFacturaRepository
     {
         List<Factura>? GetAll();
-        List<Factura>? GetByDate(DateTime date);
+        List<Factura>? GetByDate(DateOnly date);
         Factura? GetById(int nro);
         List<Factura>? GetByClient(int id);
         List<Factura>? GetByEmpleado(int id);

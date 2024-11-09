@@ -34,7 +34,7 @@ namespace FarmaciaLibrary.Services
 
         public List<Medicamento>? ObtenerPorVencimiento(DateTime date)
         {
-            return _repository.GetByDate(date);
+            return _repository.GetByVencimiento(date);
         }
 
         public void AgregarMedicamento(Medicamento medicamento)
