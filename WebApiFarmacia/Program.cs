@@ -1,6 +1,5 @@
 using FarmaciaLibrary.Models;
 using FarmaciaLibrary.Repository;
-using FarmaciaLibrary.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,9 +12,6 @@ builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 builder.Services.AddScoped<IEmpleadoRepository, EmpleadoRepository>();
 builder.Services.AddScoped<IDetalleFacturaRepository, DetalleFacturaRepository>();
 builder.Services.AddScoped<IFacturaRepository, FacturaRepository>();
-
-builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
-builder.Services.AddScoped<IMedicamentoRepository, MedicamentoRepository>();
 
 
 builder.Services.AddControllers();

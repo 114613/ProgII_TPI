@@ -13,7 +13,7 @@ public partial class Factura
 
     public int? IdSucursal { get; set; }
 
-    public DateOnly? FechaVenta { get; set; }
+    public DateTime FechaVenta { get; set; }
 
     public decimal? Total { get; set; }
 

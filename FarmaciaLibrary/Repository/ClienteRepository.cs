@@ -1,4 +1,5 @@
 ﻿using FarmaciaLibrary.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +17,12 @@ namespace FarmaciaLibrary.Repository
             _context = context;
         }
 
-        public bool Create(Cliente cliente)
+        public async Task<bool> Create(Cliente cliente)
         {
             if(cliente != null)
             {
                 _context.Clientes.Add(cliente);
-                return _context.SaveChanges() > 0;
+                return await _context.SaveChangesAsync() > 0;
             }
             else
             {
@@ -29,13 +30,13 @@ namespace FarmaciaLibrary.Repository
             }
         }
 
-        public bool Delete(int id)
+        public async Task<bool> Delete(int id)
         {
-            var cli = GetById(id);
+            var cli = await GetById(id);
             if(cli != null)
             {
                 cli.Activo = false;
-                return _context.SaveChanges() > 0;
+                return await _context.SaveChangesAsync() > 0;
             }
             else
             {
@@ -43,27 +44,28 @@ namespace FarmaciaLibrary.Repository
             }
         }
 
-        public List<Cliente>? GetAll()
+        public async Task<List<Cliente>>? GetAll()
         {
-            return _context.Clientes.Where(c => c.Activo == true).ToList();
+            return await _context.Clientes.Where(c => c.Activo == true).ToListAsync();
         }
 
-        public Cliente? GetByDocumento(int documento)
+        public async Task<Cliente>? GetByDocumento(int documento)
         {
-            return _context.Clientes.FirstOrDefault(c => c.Documento == documento && c.Activo == true);
+            return await _context.Clientes.FirstOrDefaultAsync(c => c.Documento == documento && c.Activo == true);
         }
 
-        public Cliente? GetById(int id)
+        public async Task<Cliente>? GetById(int id)
         {
-            return _context.Clientes.FirstOrDefault(c => c.IdCliente == id && c.Activo == true);
+            return await _context.Clientes.FirstOrDefaultAsync(c => c.IdCliente == id && c.Activo == true);
         }
 
-        public Cliente? GetByName(string name)
+        public async Task<List<Cliente>>? GetByName(string name)
         {
-            return _context.Clientes.FirstOrDefault(c => c.Apellido == name);
+            return await _context.Clientes.Where(c => c.Apellido == name).ToListAsync();
+            //return await _context.Clientes.Where(c => c.Apellido.Contains(name)).ToListAsync(); //busca un apellido que contenga las letras pasadas por parametro
         }
 
-        public bool Update(int id, Cliente cliente)
+        public async Task<bool> Update(int id, Cliente cliente)
         {
             var cli = _context.Clientes.Find(id);
             if(cli != null)
@@ -74,7 +76,7 @@ namespace FarmaciaLibrary.Repository
                 cli.Documento = cliente?.Documento;
                 cli.ObraSocialId = cliente?.ObraSocialId;
 
-                return _context.SaveChanges() > 0;
+                return await _context.SaveChangesAsync() > 0;
             }
             else
             {

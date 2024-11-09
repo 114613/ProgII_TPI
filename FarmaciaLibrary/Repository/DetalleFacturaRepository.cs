@@ -1,4 +1,5 @@
 ﻿using FarmaciaLibrary.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +17,12 @@ namespace FarmaciaLibrary.Repository
                 _context = context;
         }
 
-        public bool Create(DetalleFactura detalle)
+        public async Task<bool> Create(DetalleFactura detalle)
         {
             if(detalle != null)
             {
                 _context.DetalleFacturas.Add(detalle);
-                return _context.SaveChanges() > 0;
+                return await _context.SaveChangesAsync() > 0;
             }
             else
             {
@@ -29,13 +30,13 @@ namespace FarmaciaLibrary.Repository
             }
         }
 
-        public bool Delete(int nro)
+        public async Task<bool> Delete(int nro)
         {
             var detalle = _context.DetalleFacturas.Find(nro);
             if(detalle != null)
             {
                 _context.DetalleFacturas.Remove(detalle);
-                return _context.SaveChanges() > 0;
+                return await _context.SaveChangesAsync() > 0;
             }
             else
             {
@@ -43,24 +44,24 @@ namespace FarmaciaLibrary.Repository
             }
         }
 
-        public List<DetalleFactura> GetAll()
+        public async Task<List<DetalleFactura>> GetAll()
         {
-            return _context.DetalleFacturas.ToList();
+            return await _context.DetalleFacturas.ToListAsync();
         }
 
-        public List<DetalleFactura>? GetByFactura(int nroFactura)
+        public async Task<List<DetalleFactura>>? GetByFactura(int nroFactura)
         {
-            return _context.DetalleFacturas.Where(d => d.NroFactura == nroFactura).ToList();
+            return await _context.DetalleFacturas.Where(d => d.NroFactura == nroFactura).ToListAsync();
         }
 
-        public DetalleFactura? GetById(int nro)
+        public async Task<DetalleFactura>? GetById(int nro)
         {
-            return _context.DetalleFacturas.Where(d => d.NroDetalle == nro).FirstOrDefault();
+            return await _context.DetalleFacturas.Where(d => d.NroDetalle == nro).FirstOrDefaultAsync();
         }
 
-        public bool Update(int nro, DetalleFactura detalle)
+        public async Task<bool> Update(int nro, DetalleFactura detalle)
         {
-            var det = GetById(nro);
+            var det = await GetById(nro);
             if(det != null)
             {
                 det.MedicamentoId = detalle.MedicamentoId;
@@ -69,7 +70,7 @@ namespace FarmaciaLibrary.Repository
                 det.Descuento = detalle.Descuento;
                 det.Medicamento = detalle.Medicamento;
 
-                return _context.SaveChanges() > 0;
+                return await _context.SaveChangesAsync() > 0;
             }
             else
             {

@@ -9,11 +9,11 @@ namespace FarmaciaLibrary.Repository
 {
     public interface IDetalleFacturaRepository
     {
-        List<DetalleFactura> GetAll();
-        DetalleFactura? GetById(int nro);
-        List<DetalleFactura>? GetByFactura(int nroFactura); //Devuelve la lista de detalles del número de la factura pasada por parámetro
-        bool Create(DetalleFactura detalle);
-        bool Update(int nro, DetalleFactura detalle);
-        bool Delete(int nro);
+        Task<List<DetalleFactura>> GetAll();
+        Task<DetalleFactura>? GetById(int nro);
+        Task<List<DetalleFactura>>? GetByFactura(int nroFactura); //Devuelve la lista de detalles del número de la factura pasada por parámetro
+        Task<bool> Create(DetalleFactura detalle);
+        Task<bool> Update(int nro, DetalleFactura detalle);
+        Task<bool> Delete(int nro);
     }
 }

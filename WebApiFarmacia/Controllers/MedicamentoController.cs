@@ -19,11 +19,11 @@ namespace WebApiFarmacia.Controllers
 
         // GET: api/<MedicamentoController>
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
             try
             {
-                return Ok(_repository.GetAll());
+                return Ok(await _repository.GetAll());
             }
             catch (Exception ex)
             {
@@ -33,13 +33,13 @@ namespace WebApiFarmacia.Controllers
 
         // GET api/<MedicamentoController>/5
         [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
             try
             {
                 if(id != 0)
                 {
-                    return Ok(_repository.GetById(id));
+                    return Ok(await _repository.GetById(id));
                 }
                 else
                 {
@@ -53,13 +53,13 @@ namespace WebApiFarmacia.Controllers
         }
 
         [HttpGet("nombre")]
-        public IActionResult GetByName(string nombre)
+        public async Task<IActionResult> GetByName(string nombre)
         {
             try
             {
                 if (!string.IsNullOrEmpty(nombre))
                 {
-                    return Ok(_repository.GetByName(nombre));
+                    return Ok(await _repository.GetByName(nombre));
                 }
                 else
                 {
@@ -73,13 +73,13 @@ namespace WebApiFarmacia.Controllers
         }
 
         [HttpGet("date")]
-        public IActionResult GetByDate(DateTime date)
+        public async Task<IActionResult> GetByDate(DateTime date)
         {
             try
             {
                 if (ValidarFecha(date))
                 {
-                    return Ok(_repository.GetByVencimiento(date));
+                    return Ok(await _repository.GetByVencimiento(date));
                 }
                 else
                 {
@@ -99,13 +99,13 @@ namespace WebApiFarmacia.Controllers
 
         // POST api/<MedicamentoController>
         [HttpPost]
-        public IActionResult Post([FromBody] Medicamento medicamento)
+        public async Task<IActionResult> Post([FromBody] Medicamento medicamento)
         {
             try
             {
                 if (IsValid(medicamento))
                 {
-                    return Ok(_repository.Create(medicamento));
+                    return Ok(await _repository.Create(medicamento));
                 }
                 else
                 {
@@ -125,13 +125,13 @@ namespace WebApiFarmacia.Controllers
 
         // PUT api/<MedicamentoController>/5
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] Medicamento medicamento)
+        public async Task<IActionResult> Put(int id, [FromBody] Medicamento medicamento)
         {
             try
             {
                 if (id != 0 && IsValid(medicamento))
                 {
-                    return Ok(_repository.Update(id, medicamento));
+                    return Ok(await _repository.Update(id, medicamento));
                 }
                 else
                 {
@@ -146,13 +146,13 @@ namespace WebApiFarmacia.Controllers
 
         // DELETE api/<MedicamentoController>/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             try
             {
                 if(id != 0)
                 {
-                    return Ok(_repository.Delete(id));
+                    return Ok(await _repository.Delete(id));
                 }
                 else
                 {

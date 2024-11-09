@@ -19,11 +19,11 @@ namespace WebApiFarmacia.Controllers
 
         // GET: api/<EmpleadoController>
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
             try
             {
-                return Ok(_repository.GetAll());
+                return Ok(await _repository.GetAll());
             }
             catch (Exception ex)
             {
@@ -33,13 +33,13 @@ namespace WebApiFarmacia.Controllers
 
         // GET api/<EmpleadoController>/5
         [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
             try
             {
                 if (id != 0)
                 {
-                    return Ok(_repository.GetById(id));
+                    return Ok(await _repository.GetById(id));
                 }
                 else
                 {
@@ -53,13 +53,13 @@ namespace WebApiFarmacia.Controllers
         }
 
         [HttpGet("apellido")]
-        public IActionResult Get(string apellido)
+        public async Task<IActionResult> Get(string apellido)
         {
             try
             {
                 if (!string.IsNullOrEmpty(apellido))
                 {
-                    return Ok(_repository.GetByName(apellido));
+                    return Ok(await _repository.GetByName(apellido));
                 }
                 else
                 {
@@ -74,13 +74,13 @@ namespace WebApiFarmacia.Controllers
 
         // POST api/<EmpleadoController>
         [HttpPost]
-        public IActionResult Post([FromBody] Empleado empleado)
+        public async Task<IActionResult> Post([FromBody] Empleado empleado)
         {
             try
             {
                 if (IsValid(empleado))
                 {
-                    return Ok(_repository.Create(empleado));
+                    return Ok(await _repository.Create(empleado));
                 }
                 else
                 {
@@ -100,7 +100,7 @@ namespace WebApiFarmacia.Controllers
 
         // PUT api/<EmpleadoController>/5
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] Empleado empleado)
+        public async Task<IActionResult> Put(int id, [FromBody] Empleado empleado)
         {
             try
             {
@@ -108,7 +108,7 @@ namespace WebApiFarmacia.Controllers
                 {
                     if(IsValid(empleado))
                     {
-                        return Ok(_repository.Update(id, empleado));
+                        return Ok(await _repository.Update(id, empleado));
                     }
                     else
                     {
@@ -128,13 +128,13 @@ namespace WebApiFarmacia.Controllers
 
         // DELETE api/<EmpleadoController>/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             try
             {
                 if(id != 0)
                 {
-                    return Ok(_repository.Delete(id));
+                    return Ok(await _repository.Delete(id));
                 }
                 else
                 {

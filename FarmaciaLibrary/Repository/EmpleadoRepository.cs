@@ -1,4 +1,5 @@
 ﻿using FarmaciaLibrary.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +17,12 @@ namespace FarmaciaLibrary.Repository
             _context = context;
         }
 
-        public bool Create(Empleado empleado)
+        public async Task<bool> Create(Empleado empleado)
         {
             if(empleado != null)
             {
                 _context.Empleados.Add(empleado);
-                return _context.SaveChanges() > 0;
+                return await _context.SaveChangesAsync() > 0;
             }
             else
             {
@@ -29,13 +30,13 @@ namespace FarmaciaLibrary.Repository
             }
         }
 
-        public bool Delete(int id)
+        public async Task<bool> Delete(int id)
         {
-            var empleado = GetById(id);
+            var empleado = await GetById(id);
             if(empleado != null)
             {
                 _context.Empleados.Remove(empleado);
-                return _context.SaveChanges() > 0;
+                return await _context.SaveChangesAsync() > 0;
             }
             else
             {
@@ -43,24 +44,24 @@ namespace FarmaciaLibrary.Repository
             }
         }
 
-        public List<Empleado> GetAll()
+        public async Task<List<Empleado>> GetAll()
         {
-            return _context.Empleados.ToList();
+            return await _context.Empleados.ToListAsync();
         }
 
-        public Empleado? GetById(int id)
+        public async Task<Empleado>? GetById(int id)
         {
-            return _context.Empleados.Where(e => e.IdEmpleado == id).FirstOrDefault();
+            return await _context.Empleados.Where(e => e.IdEmpleado == id).FirstOrDefaultAsync();
         }
 
-        public Empleado? GetByName(string apellido)
+        public async Task<List<Empleado>>? GetByName(string apellido)
         {
-            return _context.Empleados.Where(e => e.Apellido == apellido).FirstOrDefault();
+            return await _context.Empleados.Where(e => e.Apellido == apellido).ToListAsync();
         }
 
-        public bool Update(int id, Empleado empleado)
+        public async Task<bool> Update(int id, Empleado empleado)
         {
-            var emp = GetById(id);
+            var emp = await GetById(id);
             if(emp != null)
             {
                 emp.Nombre = empleado.Nombre;
@@ -68,7 +69,7 @@ namespace FarmaciaLibrary.Repository
                 emp.Documento = empleado.Documento;
                 emp.FechaIngreso = empleado.FechaIngreso;
 
-                return _context.SaveChanges() > 0;
+                return await _context.SaveChangesAsync() > 0;
             }
             else
             {

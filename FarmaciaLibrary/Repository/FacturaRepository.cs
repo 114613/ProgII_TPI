@@ -1,4 +1,5 @@
 ﻿using FarmaciaLibrary.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +17,12 @@ namespace FarmaciaLibrary.Repository
              _context = context;
         }
 
-        public bool Create(Factura factura)
+        public async Task<bool> Create(Factura factura)
         {
             if(factura != null)
             {
                 _context.Facturas.Add(factura);
-                return _context.SaveChanges() > 0;
+                return await _context.SaveChangesAsync() > 0;
             }
             else
             {
@@ -29,13 +30,13 @@ namespace FarmaciaLibrary.Repository
             }
         }
 
-        public bool Delete(int nro)
+        public async Task<bool> Delete(int nro)
         {
             var factura = _context.Facturas.Find(nro);
             if(factura != null)
             {
                 _context.Facturas.Remove(factura);
-                return _context.SaveChanges() > 0;
+                return await _context.SaveChangesAsync() > 0;
             }
             else
             {
@@ -43,34 +44,34 @@ namespace FarmaciaLibrary.Repository
             }
         }
 
-        public List<Factura>? GetAll()
+        public async Task<List<Factura>>? GetAll()
         {
-            return _context.Facturas.ToList();
+            return await _context.Facturas.ToListAsync();
         }
 
-        public List<Factura>? GetByClient(int id)
+        public async Task<List<Factura>>? GetByClient(int id)
         {
-            return _context.Facturas.Where(f => f.IdCliente == id).ToList();
+            return await _context.Facturas.Where(f => f.IdCliente == id).ToListAsync();
         }
 
-        public List<Factura>? GetByDate(DateOnly date)
+        public async Task<List<Factura>>? GetByDate(DateTime date)
         {
-            return _context.Facturas.Where(f => f.FechaVenta.Equals(date)).ToList();
+            return await _context.Facturas.Where(f => f.FechaVenta.Equals(date)).ToListAsync();
         }
 
-        public List<Factura>? GetByEmpleado(int id)
+        public async Task<List<Factura>>? GetByEmpleado(int id)
         {
-            return _context.Facturas.Where(f => f.IdEmpleado == id).ToList();
+            return await _context.Facturas.Where(f => f.IdEmpleado == id).ToListAsync();
         }
 
-        public Factura? GetById(int nro)
+        public async Task<Factura>? GetById(int nro)
         {
-            return _context.Facturas.Where(f => f.NroFactura == nro).FirstOrDefault();
+            return await _context.Facturas.Where(f => f.NroFactura == nro).FirstOrDefaultAsync();
         }
 
-        public bool Update(int nro, Factura factura)
+        public async Task<bool> Update(int nro, Factura factura)
         {
-            var fac = GetById(nro);
+            var fac = await GetById(nro);
             if(fac != null)
             {
                 fac.DetalleFacturas = factura.DetalleFacturas;
@@ -81,7 +82,7 @@ namespace FarmaciaLibrary.Repository
                 fac.FormaPago = factura.FormaPago;
                 fac.IdEmpleado = factura.IdEmpleado;
                 
-                return _context.SaveChanges() > 0;
+                return await _context.SaveChangesAsync() > 0;
             }
             else
             {

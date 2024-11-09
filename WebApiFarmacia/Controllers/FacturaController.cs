@@ -17,11 +17,11 @@ namespace WebApiFarmacia.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
             try
             {
-                return Ok(_repository.GetAll());
+                return Ok(await _repository.GetAll());
             }
             catch (Exception)
             {
@@ -32,11 +32,11 @@ namespace WebApiFarmacia.Controllers
         }
 
         [HttpGet("{nro}")]
-        public IActionResult GetById(int nro)
+        public async Task<IActionResult> GetById(int nro)
         {
             try
             {
-                var factura = _repository.GetById(nro);
+                var factura = await _repository.GetById(nro);
                 if (factura == null)
                 {
                     return NotFound($"No se encontró la factura con el número {nro}.");
@@ -53,13 +53,13 @@ namespace WebApiFarmacia.Controllers
         }
 
         [HttpGet("cliente/{id}")]
-        public IActionResult GetByClient(int id)
+        public async Task<IActionResult> GetByClient(int id)
         {
             try
             {
                 if(id != 0)
                 {
-                    return Ok(_repository.GetByClient(id));
+                    return Ok(await _repository.GetByClient(id));
                 }
                 else
                 {
@@ -74,13 +74,13 @@ namespace WebApiFarmacia.Controllers
         }
 
         [HttpGet("fecha/{date}")]
-        public IActionResult GetByDate(DateOnly date)
+        public async Task<IActionResult> GetByDate(DateTime date)
         {
             try
             {
-                if(date != DateOnly.MinValue)
+                if(date != DateTime.MinValue)
                 {
-                    return Ok(_repository.GetByDate(date));
+                    return Ok(await _repository.GetByDate(date));
                 }
                 else
                 {
@@ -94,13 +94,13 @@ namespace WebApiFarmacia.Controllers
         }
 
         [HttpGet("empleado/{id}")]
-        public IActionResult GetByEmpleado(int id)
+        public async Task<IActionResult> GetByEmpleado(int id)
         {
             try
             {
                 if(id != 0)
                 {
-                    return Ok(_repository.GetByEmpleado(id));
+                    return Ok(await _repository.GetByEmpleado(id));
                 }
                 else
                 {
@@ -114,13 +114,13 @@ namespace WebApiFarmacia.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] Factura factura)
+        public async Task<IActionResult> Post([FromBody] Factura factura)
         {
             try
             {
                 if (IsValid(factura))
                 {
-                    return Ok(_repository.Create(factura));
+                    return Ok(await _repository.Create(factura));
                 }
                 else
                 {
@@ -136,11 +136,11 @@ namespace WebApiFarmacia.Controllers
 
         private bool IsValid(Factura factura)
         {
-            return factura.IdCliente.HasValue && factura.FechaVenta.HasValue && !string.IsNullOrEmpty(factura.FormaPago) && factura.IdEmpleado.HasValue;
+            return factura.IdCliente.HasValue && factura.FechaVenta != DateTime.MinValue && !string.IsNullOrEmpty(factura.FormaPago) && factura.IdEmpleado.HasValue;
         }
 
         [HttpPut("{nro}")]
-        public IActionResult Put(int nro, [FromBody] Factura factura)
+        public async Task<IActionResult> Put(int nro, [FromBody] Factura factura)
         {
             try
             {
@@ -148,7 +148,7 @@ namespace WebApiFarmacia.Controllers
                 {
                     if (IsValid(factura))
                     {
-                        return Ok(_repository.Update(nro, factura));
+                        return Ok(await _repository.Update(nro, factura));
                     }
                     else
                     {
@@ -168,13 +168,13 @@ namespace WebApiFarmacia.Controllers
         }
 
         [HttpDelete("{nro}")]
-        public IActionResult Delete(int nro)
+        public async Task<IActionResult> Delete(int nro)
         {
             try
             {
                 if(nro != 0)
                 {
-                    return Ok(_repository.Delete(nro));
+                    return Ok(await _repository.Delete(nro));
                 }
                 else
                 {

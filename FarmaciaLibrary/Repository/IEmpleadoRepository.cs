@@ -9,11 +9,11 @@ namespace FarmaciaLibrary.Repository
 {
     public interface IEmpleadoRepository
     {
-        List<Empleado> GetAll();
-        Empleado? GetById(int id);
-        Empleado? GetByName(string apellido);
-        bool Create(Empleado empleado);
-        bool Update(int id,  Empleado empleado);
-        bool Delete(int id);
+        Task<List<Empleado>> GetAll();
+        Task<Empleado>? GetById(int id);
+        Task<List<Empleado>>? GetByName(string apellido);
+        Task<bool> Create(Empleado empleado);
+        Task<bool> Update(int id,  Empleado empleado);
+        Task<bool> Delete(int id);
     }
 }

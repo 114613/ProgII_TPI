@@ -9,13 +9,13 @@ namespace FarmaciaLibrary.Repository
 {
     public interface IFacturaRepository
     {
-        List<Factura>? GetAll();
-        List<Factura>? GetByDate(DateOnly date);
-        Factura? GetById(int nro);
-        List<Factura>? GetByClient(int id);
-        List<Factura>? GetByEmpleado(int id);
-        bool Create(Factura factura);
-        bool Update(int nro, Factura factura);
-        bool Delete(int nro);
+        Task<List<Factura>>? GetAll();
+        Task<List<Factura>>? GetByDate(DateTime date);
+        Task<Factura>? GetById(int nro);
+        Task<List<Factura>>? GetByClient(int id);
+        Task<List<Factura>>? GetByEmpleado(int id);
+        Task<bool> Create(Factura factura);
+        Task<bool> Update(int nro, Factura factura);
+        Task<bool> Delete(int nro);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using FarmaciaLibrary.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +17,12 @@ namespace FarmaciaLibrary.Repository
             _context = context;
         }
 
-        public bool Create(Medicamento medicamento)
+        public async Task<bool> Create(Medicamento medicamento)
         {
             if(medicamento != null)
             {
                 _context.Medicamentos.Add(medicamento);
-                return _context.SaveChanges() > 0;
+                return await _context.SaveChangesAsync() > 0;
             }
             else
             {
@@ -29,13 +30,13 @@ namespace FarmaciaLibrary.Repository
             }
         }
 
-        public bool Delete(int id)
+        public async Task<bool> Delete(int id)
         {
-            var med = GetById(id);
+            var med = await GetById(id);
             if (med != null)
             {
                 med.Activo = false;
-                return _context.SaveChanges() > 0;
+                return await _context.SaveChangesAsync() > 0;
             }
             else
             {
@@ -43,27 +44,27 @@ namespace FarmaciaLibrary.Repository
             }
         }
 
-        public List<Medicamento> GetAll()
+        public async Task<List<Medicamento>> GetAll()
         {
-            return _context.Medicamentos.Where(m => m.Activo == true).ToList();
+            return await _context.Medicamentos.Where(m => m.Activo == true).ToListAsync();
         }
 
-        public List<Medicamento>? GetByVencimiento(DateTime date)
+        public async Task<List<Medicamento>>? GetByVencimiento(DateTime date)
         {
-            return _context.Medicamentos.Where(m => m.FechaVencimiento <= date && m.Activo == true && m.Cantidad > 0).ToList();
+            return await _context.Medicamentos.Where(m => m.FechaVencimiento <= date && m.Activo == true && m.Cantidad > 0).ToListAsync();
         }
 
-        public Medicamento? GetById(int id)
+        public async Task<Medicamento>? GetById(int id)
         {
-            return _context.Medicamentos.FirstOrDefault(m => m.MedicamentoId == id && m.Activo == true);
+            return await _context.Medicamentos.FirstOrDefaultAsync(m => m.MedicamentoId == id && m.Activo == true);
         }
 
-        public Medicamento? GetByName(string nombre)
+        public async Task<List<Medicamento>>? GetByName(string nombre)
         {
-            return _context.Medicamentos.FirstOrDefault(m => m.Nombre == nombre);
+            return await _context.Medicamentos.Where(m => m.Nombre == nombre).ToListAsync();
         }
 
-        public bool Update(int id, Medicamento medicamento)
+        public async Task<bool> Update(int id, Medicamento medicamento)
         {
             var med = _context.Medicamentos.Find(id);
             if(med != null)
@@ -76,7 +77,7 @@ namespace FarmaciaLibrary.Repository
                 med.Cantidad = medicamento?.Cantidad;
                 med.Activo = medicamento?.Activo;
 
-                return _context.SaveChanges() > 0;
+                return await _context.SaveChangesAsync() > 0;
             }
             else
             {

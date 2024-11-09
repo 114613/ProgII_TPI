@@ -27,7 +27,7 @@
   },
   {
     "ContainingType": "WebApiFarmacia.Controllers.ClienteController",
-    "Method": "put",
+    "Method": "Put",
     "RelativePath": "api/Cliente",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -64,7 +64,7 @@
   },
   {
     "ContainingType": "WebApiFarmacia.Controllers.ClienteController",
-    "Method": "delete",
+    "Method": "Delete",
     "RelativePath": "api/Cliente/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -421,7 +421,7 @@
     "Parameters": [
       {
         "Name": "date",
-        "Type": "System.DateOnly",
+        "Type": "System.DateTime",
         "IsRequired": true
       }
     ],

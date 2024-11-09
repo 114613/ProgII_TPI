@@ -67,7 +67,7 @@ CREATE TABLE Facturas
     nro_factura INT identity(1,1) PRIMARY KEY,
     id_cliente INT,
     id_sucursal INT,
-    FechaVenta DATE,
+    FechaVenta datetime,
     Total DECIMAL(10, 2),
 	forma_pago varchar(50),
 	id_empleado int,

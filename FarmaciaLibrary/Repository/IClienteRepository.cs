@@ -9,17 +9,17 @@ namespace FarmaciaLibrary.Repository
 {
     public interface IClienteRepository
     {
-        List<Cliente>? GetAll();
-        Cliente? GetById(int id);
-        Cliente? GetByDocumento(int documento);
+        Task<List<Cliente>>? GetAll();
+        Task<Cliente>? GetById(int id);
+        Task<Cliente>? GetByDocumento(int documento);
 
         //Devuelve al cliente sin importar si esta activo o no
-        Cliente? GetByName(string name);
-        bool Create(Cliente cliente);
-        bool Update(int id, Cliente cliente);
+        Task<List<Cliente>>? GetByName(string name);
+        Task<bool> Create(Cliente cliente);
+        Task<bool> Update(int id, Cliente cliente);
 
         //Baja lógica
-        bool Delete(int id);
+        Task<bool> Delete(int id);
 
     }
 }
