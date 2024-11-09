@@ -15,11 +15,11 @@ namespace FarmaciaLibrary.Repository
 
         //Devuelve al cliente sin importar si esta activo o no
         Cliente? GetByName(string name);
-        void Create(Cliente cliente);
-        void Update(int id, Cliente cliente);
+        bool Create(Cliente cliente);
+        bool Update(int id, Cliente cliente);
 
         //Baja lógica
-        void Delete(int id);
+        bool Delete(int id);
 
     }
 }

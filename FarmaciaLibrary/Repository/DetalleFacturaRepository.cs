@@ -16,22 +16,30 @@ namespace FarmaciaLibrary.Repository
                 _context = context;
         }
 
-        public void Create(DetalleFactura detalle)
+        public bool Create(DetalleFactura detalle)
         {
             if(detalle != null)
             {
                 _context.DetalleFacturas.Add(detalle);
-                _context.SaveChanges();
+                return _context.SaveChanges() > 0;
+            }
+            else
+            {
+                return false;
             }
         }
 
-        public void Delete(int nro)
+        public bool Delete(int nro)
         {
             var detalle = _context.DetalleFacturas.Find(nro);
             if(detalle != null)
             {
                 _context.DetalleFacturas.Remove(detalle);
-                _context.SaveChanges();
+                return _context.SaveChanges() > 0;
+            }
+            else
+            {
+                return false;
             }
         }
 
@@ -50,7 +58,7 @@ namespace FarmaciaLibrary.Repository
             return _context.DetalleFacturas.Where(d => d.NroDetalle == nro).FirstOrDefault();
         }
 
-        public void Update(int nro, DetalleFactura detalle)
+        public bool Update(int nro, DetalleFactura detalle)
         {
             var det = GetById(nro);
             if(det != null)
@@ -61,7 +69,11 @@ namespace FarmaciaLibrary.Repository
                 det.Descuento = detalle.Descuento;
                 det.Medicamento = detalle.Medicamento;
 
-                _context.SaveChanges();
+                return _context.SaveChanges() > 0;
+            }
+            else
+            {
+                return false;
             }
         }
     }

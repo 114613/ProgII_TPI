@@ -16,22 +16,30 @@ namespace FarmaciaLibrary.Repository
             _context = context;
         }
 
-        public void Create(Cliente cliente)
+        public bool Create(Cliente cliente)
         {
             if(cliente != null)
             {
                 _context.Clientes.Add(cliente);
-                _context.SaveChanges();
+                return _context.SaveChanges() > 0;
+            }
+            else
+            {
+                return false;
             }
         }
 
-        public void Delete(int id)
+        public bool Delete(int id)
         {
             var cli = GetById(id);
             if(cli != null)
             {
                 cli.Activo = false;
-                _context.SaveChanges();
+                return _context.SaveChanges() > 0;
+            }
+            else
+            {
+                return false;
             }
         }
 
@@ -55,7 +63,7 @@ namespace FarmaciaLibrary.Repository
             return _context.Clientes.FirstOrDefault(c => c.Apellido == name);
         }
 
-        public void Update(int id, Cliente cliente)
+        public bool Update(int id, Cliente cliente)
         {
             var cli = _context.Clientes.Find(id);
             if(cli != null)
@@ -66,7 +74,11 @@ namespace FarmaciaLibrary.Repository
                 cli.Documento = cliente?.Documento;
                 cli.ObraSocialId = cliente?.ObraSocialId;
 
-                _context.SaveChanges();
+                return _context.SaveChanges() > 0;
+            }
+            else
+            {
+                return false;
             }
         }
     }

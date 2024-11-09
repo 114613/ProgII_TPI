@@ -12,8 +12,8 @@ namespace FarmaciaLibrary.Repository
         List<Empleado> GetAll();
         Empleado? GetById(int id);
         Empleado? GetByName(string apellido);
-        void Create(Empleado empleado);
-        void Update(int id,  Empleado empleado);
-        void Delete(int id);
+        bool Create(Empleado empleado);
+        bool Update(int id,  Empleado empleado);
+        bool Delete(int id);
     }
 }

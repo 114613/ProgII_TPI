@@ -14,8 +14,8 @@ namespace FarmaciaLibrary.Repository
         Factura? GetById(int nro);
         List<Factura>? GetByClient(int id);
         List<Factura>? GetByEmpleado(int id);
-        void Create(Factura factura);
-        void Update(int nro, Factura factura);
-        void Delete(int nro);
+        bool Create(Factura factura);
+        bool Update(int nro, Factura factura);
+        bool Delete(int nro);
     }
 }

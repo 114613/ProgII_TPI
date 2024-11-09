@@ -12,8 +12,8 @@ namespace FarmaciaLibrary.Repository
         List<DetalleFactura> GetAll();
         DetalleFactura? GetById(int nro);
         DetalleFactura? GetByFactura(int nroFactura);
-        void Create(DetalleFactura detalle);
-        void Update(int nro, DetalleFactura detalle);
-        void Delete(int nro);
+        bool Create(DetalleFactura detalle);
+        bool Update(int nro, DetalleFactura detalle);
+        bool Delete(int nro);
     }
 }
