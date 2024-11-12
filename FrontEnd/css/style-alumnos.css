@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #ffffff;
+    
+}
+
+.wrapper1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    background: linear-gradient(to top right, #2575fc, #11cb9c);
+}
+
+.text-center{
+    font-family:DM Serif Display, serif;
+    color: #ffffff;
+}
+.card {
+    position: relative;
+    width: 300px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.poster img {
+    width: 100%;
+    height: auto;
+}
+
+/* Ocultamos inicialmente el contenedor .details */
+.details {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+
+/* Cuando se pasa el cursor sobre la tarjeta, mostramos .details */
+.card:hover .details {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.title-alumno {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #ddd;
+    
+}
+
+.subtitle-alumno {
+    font-size: 0.9rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rating i {
+    color: gold;
+    margin-right: 3px;
+}
+
+.rating span {
+    font-size: 0.85rem;
+    color: #ddd;
+    margin-left: 5px;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+.desc {
+    font-size: 0.85rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.cast {
+    margin-top: 10px;
+}
+
+.habilited {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.cast ul {
+    display: flex;
+    gap: 10px;
+}
+
+.cast ul li {
+    list-style: none;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.cast ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

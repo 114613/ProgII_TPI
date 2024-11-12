@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Clientes y Medicamentos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+     <!-- Estilos -->
+     <link rel="stylesheet" href="../css/style-stock.css">
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+     
+     
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="sidebar">
+
+            <button id="toggleSidebar" class="toggle-btn">
+                <i class="bi bi-arrow-left-right"></i>
+            </button>
+            
+            <ul class="nav flex-column">
+            <li class="nav-item" id="section-acerca">
+                <a class="nav-link" href="../pages/alumnos.html">
+                    <i class="bi bi-house-door"></i> <span class="link-text">Alumnos
+                    </span>
+                </a>
+            </li>
+            <li class="nav-item" id="section-dashboard">
+                <a class="nav-link" href="../pages/dashboard.html">
+                    <i class="bi bi-grid"></i> <span class="link-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item" id="section-ventas">
+                <a class="nav-link" href="../pages/ventas.html">
+                    <i class="bi bi-cart"></i> <span class="link-text">Ventas</span>
+                </a>
+            </li>
+            <li class="nav-item" id="section-soporte">
+                <a class="nav-link" href="../pages/soporte-medicamento-clientes.html">
+                    <i class="bi bi-headset"></i> <span class="link-text">Soporte</span>
+                </a>
+            </li>
+        </ul>
+            <button id="logoutButton" onclick="logout()">Cerrar sesión</button>
+        </div>
+        <!-- Contenido principal -->
+        <div class="content">
+            <!-- Formulario para Clientes -->
+            <div id="clientForm" style="display:none;">
+                <h2>Formulario de Cliente</h2>
+                <form id="clientFormElement">
+                    <label for="clientName">Nombre:</label>
+                    <input type="text" id="clientName" required>
+                    <label for="clientLastName">Apellido:</label>
+                    <input type="text" id="clientLastName" required>
+                    <label for="clientDocument">Documento:</label>
+                    <input type="text" id="clientDocument" required>
+                    <label for="clientObraSocialId">Obra Social ID:</label>
+                    <input type="text" id="clientObraSocialId" required>
+                    <label for="clientActive">Activo:</label>
+                    <select id="clientActive">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                    <button type="submit">Guardar</button>
+                    <button type="button" onclick="closeForm('clientForm')">Cancelar</button>
+                </form>
+            </div>
+
+            <!-- Tabla de Clientes -->
+            <h2>Clientes</h2>
+            <button onclick="openClientForm()">Nuevo Cliente</button>
+            <table id="clientsTable">
+                <thead>
+                    <tr>
+                        <th>IdCliente</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Documento</th>
+                        <th>Obra Social ID</th>
+                        <th>Activo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <!-- Formulario para Medicamentos -->
+            <div id="medicineForm" style="display:none;">
+                <h2>Formulario de Medicamento</h2>
+                <form id="medicineFormElement">
+                    <label for="medicineName">Nombre:</label>
+                    <input type="text" id="medicineName" required>
+                    <label for="medicineBarcode">Código de Barras:</label>
+                    <input type="text" id="medicineBarcode" required>
+                    <label for="medicineRequiresAuthorization">Requiere Autorización:</label>
+                    <select id="medicineRequiresAuthorization">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                    <label for="medicineExpiryDate">Fecha de Vencimiento:</label>
+                    <input type="date" id="medicineExpiryDate" required>
+                    <label for="medicinePrice">Precio:</label>
+                    <input type="number" id="medicinePrice" required>
+                    <label for="medicineQuantity">Cantidad:</label>
+                    <input type="number" id="medicineQuantity" required>
+                    <button type="submit">Guardar</button>
+                    <button type="button" onclick="closeForm('medicineForm')">Cancelar</button>
+                </form>
+            </div>
+
+            <!-- Tabla de Medicamentos -->
+            <h2>Medicamentos</h2>
+            <button onclick="openMedicineForm()">Nuevo Medicamento</button>
+            <table id="medicinesTable">
+                <thead>
+                    <tr>
+                        <th>MedicamentoId</th>
+                        <th>Código de Barras</th>
+                        <th>Nombre</th>
+                        <th>Requiere Autorización</th>
+                        <th>Fecha de Vencimiento</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script-nav.js"></script>
+    <script src="../js/script-crud-soporte.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>
