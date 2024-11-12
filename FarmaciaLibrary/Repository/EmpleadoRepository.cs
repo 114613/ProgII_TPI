@@ -56,7 +56,7 @@ namespace FarmaciaLibrary.Repository
 
         public async Task<List<Empleado>>? GetByName(string apellido)
         {
-            return await _context.Empleados.Where(e => e.Apellido == apellido).ToListAsync();
+            return await _context.Empleados.Where(e => e.Apellido.Contains(apellido)).ToListAsync();
         }
 
         public async Task<bool> Update(int id, Empleado empleado)

@@ -40,6 +40,9 @@ public partial class FarmaciaContext : DbContext
                 .HasMaxLength(100)
                 .IsUnicode(false)
                 .HasColumnName("apellido");
+            entity.Property(e => e.Contacto)
+                .HasMaxLength(100)
+                .HasColumnName("contacto");
             entity.Property(e => e.Documento).HasColumnName("documento");
             entity.Property(e => e.Nombre)
                 .HasMaxLength(100)
@@ -54,7 +57,7 @@ public partial class FarmaciaContext : DbContext
 
         modelBuilder.Entity<DetalleFactura>(entity =>
         {
-            entity.HasKey(e => e.NroDetalle).HasName("PK__DetalleF__D582A832F9B92A4F");
+            entity.HasKey(e => e.NroDetalle).HasName("PK__DetalleF__D582A83226A914F6");
 
             entity.Property(e => e.NroDetalle).HasColumnName("nro_detalle");
             entity.Property(e => e.Descuento).HasColumnType("decimal(10, 2)");
@@ -80,6 +83,9 @@ public partial class FarmaciaContext : DbContext
                 .HasMaxLength(100)
                 .IsUnicode(false)
                 .HasColumnName("apellido");
+            entity.Property(e => e.Contacto)
+                .HasMaxLength(100)
+                .HasColumnName("contacto");
             entity.Property(e => e.Documento).HasColumnName("documento");
             entity.Property(e => e.FechaIngreso)
                 .HasColumnType("datetime")
@@ -92,9 +98,10 @@ public partial class FarmaciaContext : DbContext
 
         modelBuilder.Entity<Factura>(entity =>
         {
-            entity.HasKey(e => e.NroFactura).HasName("PK__Facturas__B31FA9AF0750E8CB");
+            entity.HasKey(e => e.NroFactura).HasName("PK__Facturas__B31FA9AFDB26E104");
 
             entity.Property(e => e.NroFactura).HasColumnName("nro_factura");
+            entity.Property(e => e.FechaVenta).HasColumnType("datetime");
             entity.Property(e => e.FormaPago)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -119,7 +126,7 @@ public partial class FarmaciaContext : DbContext
 
         modelBuilder.Entity<Login>(entity =>
         {
-            entity.HasKey(e => e.IdLogin).HasName("PK__Login__1DEA7BADB3D52C55");
+            entity.HasKey(e => e.IdLogin).HasName("PK__Login__1DEA7BAD12D813B0");
 
             entity.ToTable("Login");
 
@@ -134,7 +141,7 @@ public partial class FarmaciaContext : DbContext
 
         modelBuilder.Entity<Medicamento>(entity =>
         {
-            entity.HasKey(e => e.MedicamentoId).HasName("PK__Medicame__FC07D78C30E074FB");
+            entity.HasKey(e => e.MedicamentoId).HasName("PK__Medicame__FC07D78CA18D2163");
 
             entity.Property(e => e.MedicamentoId).HasColumnName("Medicamento_id");
             entity.Property(e => e.FechaVencimiento)

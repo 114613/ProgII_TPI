@@ -15,6 +15,8 @@ public partial class Empleado
 
     public int? Documento { get; set; }
 
+    public string Contacto { get; set; }
+
     public DateTime? FechaIngreso { get; set; }
 
     public virtual ICollection<Factura> Facturas { get; set; } = new List<Factura>();

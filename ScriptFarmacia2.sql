@@ -1,14 +1,14 @@
-create database TPI_Farmacia
+create database TPI_FarmaciaII
 go
-use TPI_Farmacia
+use TPI_FarmaciaII
 go
 
---empleados--
 create table Empleados
 (id_empleado int identity(1,1),
  nombre varchar(100),
  apellido varchar(100),
  documento int,
+ contacto nvarchar(100),
  fecha_ingreso datetime,
 
  constraint pk_empleado primary key(id_empleado),
@@ -31,6 +31,7 @@ create table Clientes
  apellido varchar(100),
  documento int,
  obra_social_id int,
+ contacto nvarchar(100),
  Activo bit
 
  constraint pk_cliente primary key(id_cliente),
@@ -97,38 +98,40 @@ CREATE TABLE Login(
 	contraseña nvarchar(50)
 );
 
+--formato de fecha día/mes/año
+set dateformat dmy
 
 --insert en la tabla empleados
 
 INSERT INTO Empleados (nombre, apellido, documento, fecha_ingreso) 
-VALUES ('Juan', 'Pérez', 12345678, '15/01/2021');
+VALUES ('Juan', 'Perez', 12345678, '15/01/2021');
 
 INSERT INTO Empleados (nombre, apellido, documento, fecha_ingreso) 
-VALUES ('María', 'Gómez', 23456789, '20/03/2020');
+VALUES ('María', 'Gomez', 23456789, '20/03/2020');
 
 INSERT INTO Empleados (nombre, apellido, documento, fecha_ingreso) 
-VALUES ('Carlos', 'Fernández', 34567890, '10/05/2019');
+VALUES ('Carlos', 'Fernandez', 34567890, '10/05/2019');
 
 INSERT INTO Empleados (nombre, apellido, documento, fecha_ingreso) 
-VALUES ('Ana', 'López', 45678901, '01/06/2022');
+VALUES ('Ana', 'Lopez', 45678901, '01/06/2022');
 
 INSERT INTO Empleados (nombre, apellido, documento, fecha_ingreso)
-VALUES ('Pedro', 'Sánchez', 56789012, '15/07/2023');
+VALUES ('Pedro', 'Sanchez', 56789012, '15/07/2023');
 
 INSERT INTO Empleados (nombre, apellido, documento, fecha_ingreso) 
-VALUES ('Laura', 'Martínez', 67890123, '25/08/2018');
+VALUES ('Laura', 'Martinez', 67890123, '25/08/2018');
 
 INSERT INTO Empleados (nombre, apellido, documento, fecha_ingreso) 
-VALUES ('Sofía', 'Rodríguez', 78901234, '30/09/2021');
+VALUES ('Sofía', 'Rodriguez', 78901234, '30/09/2021');
 
 INSERT INTO Empleados (nombre, apellido, documento, fecha_ingreso) 
-VALUES ('Miguel', 'García', 89012345, '05/10/2017');
+VALUES ('Miguel', 'Garcia', 89012345, '05/10/2017');
 
 INSERT INTO Empleados (nombre, apellido, documento, fecha_ingreso) 
-VALUES ('Lucía', 'Hernández', 90123456, '18/11/2010');
+VALUES ('Lucía', 'Hernandez', 90123456, '18/11/2010');
 
 INSERT INTO Empleados (nombre, apellido, documento, fecha_ingreso) 
-VALUES ('Jorge', 'Ramírez', 01234567, '28/02/2000');
+VALUES ('Jorge', 'Ramirez', 01234567, '28/02/2000');
 
 INSERT INTO Empleados (nombre, apellido, documento, fecha_ingreso) 
 VALUES ('Daniela', 'Silva', 09876543, '12/04/2002');
@@ -136,8 +139,6 @@ VALUES ('Daniela', 'Silva', 09876543, '12/04/2002');
 INSERT INTO Empleados (nombre, apellido, documento, fecha_ingreso) 
 VALUES ('Felipe', 'Moreno', 87654321, '07/06/2024');
 
-
---insert en a tabla obras sociales
 
 INSERT INTO ObrasSociales (Nombre, Activo) 
 VALUES ('PAMI', 1);
@@ -159,36 +160,35 @@ VALUES ('Obra Social Bancaria', 1);
 
 
 --insert en la tabla clientes
-INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo) 
-VALUES ('Juliana', 'Pérez', 12345678, 1, 1);
+INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo, contacto) 
+VALUES ('Juliana', 'Perez', 12345678, 1, 1, 'perez@gmail.com');
 
-INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo)  
-VALUES ('Carmen', 'González', 23456789, 2, 1);
+INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo, contacto)  
+VALUES ('Carmen', 'Gonzalez', 23456789, 2, 1, 'gonzalez@gmail.com');
 
-INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo) 
-VALUES ('Paulo', 'Rodríguez', 34567890, 3, 1);
+INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo, contacto) 
+VALUES ('Paulo', 'Rodriguez', 34567890, 3, 1, 'rodriguez@gmail.com');
 
-INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo) 
-VALUES ('Susana', 'López', 45678901, 4, 1);
+INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo, contacto) 
+VALUES ('Susana', 'Lopez', 45678901, 4, 1, 'lopez@gmail.com');
 
-INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo) 
-VALUES ('Armando', 'Sánchez', 56789012, 1, 1);
+INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo, contacto) 
+VALUES ('Armando', 'Sanchez', 56789012, 1, 1, 3513232323);
 
-INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo) 
-VALUES ('Mateo', 'Martínez', 67890123, 5, 1);
+INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo, contacto) 
+VALUES ('Mateo', 'Martinez', 67890123, 5, 1, 3415343434);
 
-INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo) 
-VALUES ('Jimena', 'Ramírez', 78901234, 6, 1);
+INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo, contacto) 
+VALUES ('Jimena', 'Ramirez', 78901234, 6, 1, 3532131313);
 
-INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo) 
-VALUES ('Manuel', 'García', 89012345, 2, 1);
+INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo, contacto) 
+VALUES ('Manuel', 'Garcia', 89012345, 2, 1, 'garcia@gmail.com');
 
-INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo) 
-VALUES ('Luciana', 'Hernández', 90123456, 3, 1);
+INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo, contacto) 
+VALUES ('Luciana', 'Hernandez', 90123456, 3, 1, 'hernandez@gmail.com');
 
-INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo) 
-VALUES ('Javier', 'Silva', 01234567, 2, 1);
-
+INSERT INTO Clientes (nombre, apellido, documento, obra_social_id, activo, contacto) 
+VALUES ('Javier', 'Silva', 01234567, 2, 1, 2613454545);
 
 --insert en sucursales
 
@@ -201,8 +201,6 @@ VALUES ('Sucursal Sur');
 INSERT INTO Sucursales (direccion)
 VALUES ('Sucursal Norte');
 
-
---insert suministro
 INSERT INTO Medicamentos(CodigoBarras, Nombre, RequiereAutorizacion, fecha_vencimiento, Precio, cantidad, activo)
 VALUES (567890123, 'Paracetamol 500mg', 0, '31/12/2026', 10.50, 500, 1);  
 
@@ -236,25 +234,25 @@ VALUES (567890132, 'Acido Acetilsalicilico 100mg', 0, '25/09/2028', 10.00, 300, 
 
 --insert ventas
 INSERT INTO Facturas (id_cliente, id_sucursal, FechaVenta, Total, forma_pago, id_empleado)
-VALUES (1, 1, '2024-09-15', 100.00, 'Efectivo', 1);
+VALUES (1, 1, '15/09/2024', 100.00, 'Efectivo', 1);
 INSERT INTO Facturas (id_cliente, id_sucursal, FechaVenta, Total, forma_pago, id_empleado) 
-VALUES (2, 1, '2024-09-16', 150.50, 'Débito', 2);
+VALUES (2, 1, '16/09/2024', 150.50, 'Debito', 2);
 INSERT INTO Facturas (id_cliente, id_sucursal, FechaVenta, Total, forma_pago, id_empleado)
-VALUES (3, 2, '2024-09-17', 200.00, 'Transferencia', 3);
+VALUES (3, 2, '17/09/2024', 200.00, 'Transferencia', 3);
 INSERT INTO Facturas (id_cliente, id_sucursal, FechaVenta, Total, forma_pago, id_empleado)
-VALUES (4, 2, '2024-09-18', 120.25, 'Efectivo', 1);
+VALUES (4, 2, '18/09/2024', 120.25, 'Efectivo', 1);
 INSERT INTO Facturas (id_cliente, id_sucursal, FechaVenta, Total, forma_pago, id_empleado)
-VALUES (5, 3, '2024-09-19', 175.75, 'Transferencia', 2);
+VALUES (5, 3, '19/09/2024', 175.75, 'Transferencia', 2);
 INSERT INTO Facturas (id_cliente, id_sucursal, FechaVenta, Total, forma_pago, id_empleado)
-VALUES (6, 3, '2024-09-20', 220.10, 'Débito', 3);
+VALUES (6, 3, '20/09/2024', 220.10, 'Debito', 3);
 INSERT INTO Facturas (id_cliente, id_sucursal, FechaVenta, Total, forma_pago, id_empleado)
-VALUES (7, 1, '2024-09-21', 90.00, 'Débito', 1);
+VALUES (7, 1, '21/09/2024', 90.00, 'Debito', 1);
 INSERT INTO Facturas (id_cliente, id_sucursal, FechaVenta, Total, forma_pago, id_empleado)
-VALUES (8, 2, '2024-09-22', 140.00, 'Débito', 2);
+VALUES (8, 2, '22/09/2024', 140.00, 'Debito', 2);
 INSERT INTO Facturas (id_cliente, id_sucursal, FechaVenta, Total, forma_pago, id_empleado)
-VALUES (9, 3, '2024-09-23', 95.50, 'Transferencia', 3);
+VALUES (9, 3, '23/09/2024', 95.50, 'Transferencia', 3);
 INSERT INTO Facturas (id_cliente, id_sucursal, FechaVenta, Total, forma_pago, id_empleado)
-VALUES (10, 1, '2024-09-24', 110.00, 'Efectivo', 1);
+VALUES (10, 1, '24/09/2024', 110.00, 'Efectivo', 1);
 
 
 --insert detalle ventas

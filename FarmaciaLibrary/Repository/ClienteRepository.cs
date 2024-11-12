@@ -61,8 +61,7 @@ namespace FarmaciaLibrary.Repository
 
         public async Task<List<Cliente>>? GetByName(string name)
         {
-            return await _context.Clientes.Where(c => c.Apellido == name).ToListAsync();
-            //return await _context.Clientes.Where(c => c.Apellido.Contains(name)).ToListAsync(); //busca un apellido que contenga las letras pasadas por parametro
+            return await _context.Clientes.Where(c => c.Apellido.Contains(name)).ToListAsync(); //busca un apellido que contenga las letras pasadas por parametro
         }
 
         public async Task<bool> Update(int id, Cliente cliente)

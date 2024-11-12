@@ -17,6 +17,8 @@ public partial class Cliente
 
     public int? ObraSocialId { get; set; }
 
+    public string Contacto { get; set; }
+
     public bool? Activo { get; set; }
 
     public virtual ICollection<Factura> Facturas { get; set; } = new List<Factura>();
