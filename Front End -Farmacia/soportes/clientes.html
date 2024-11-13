@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Incluir Bootstrap desde CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/soporte-cliente/soporte-cliente.css">
+  <title>Gestión de Clientes</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Farmaceutica</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../navegacion/nav.empleado.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../alumnos/alumnos.html">Alumnos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../ventas/ventas.html">Ventas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href=href="../dashboard/dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Soporte
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="../soportes/clientes.html">Clientes</a></li>
+              <li><a class="dropdown-item" href="../soportes/medicamentos.html">Medicamentos</a></li>
+              <li><a class="dropdown-item" href="../soportes/empleados.html">Empleados</a></li>
+              <li><a class="dropdown-item" href="../soportes/facturacion.html">Facturacion</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button class="btn btn-danger ms-auto" onclick="logout()">Cerrar sesión</button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="content">
+    <div class="container">
+      <h2>Gestión de Clientes</h2>
+      <button id="addClientBtn" class="btn btn-primary mb-3">Agregar Cliente</button>
+
+      <form id="clientForm" class="hidden">
+        <h3 id="formTitle">Agregar Cliente</h3>
+        <input type="hidden" id="id_cliente" />
+        <div>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" required class="form-control" />
+        </div>
+        <div>
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" required class="form-control" />
+        </div>
+        <div>
+          <label for="documento">Documento:</label>
+          <input type="number" id="documento" required class="form-control" />
+        </div>
+        <div>
+          <label for="obra_social_id">Obra Social ID:</label>
+          <input type="number" id="obra_social_id" required class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-success mt-2">Guardar</button>
+        <button type="button" id="cancelBtn"class="btn btn-success mt-2">Cancelar</button> <!-- Botón de cancelar -->
+      </form>
+      <div id="filters" class="mt-4">
+        <h3>Filtros de Búsqueda</h3>
+        <form id="filterForm">
+          <div class="row">
+            <div class="col">
+              <label for="filterNombre">Nombre:</label>
+              <input type="text" id="filterNombre" class="form-control">
+            </div>
+            <div class="col">
+              <label for="filterApellido">Apellido:</label>
+              <input type="text" id="filterApellido" class="form-control">
+            </div>
+            <div class="col">
+              <label for="filterDocumento">Documento:</label>
+              <input type="number" id="filterDocumento" class="form-control">
+            </div>
+            <div class="col">
+              <label for="filterObraSocialId">Obra Social ID:</label>
+              <input type="number" id="filterObraSocialId" class="form-control">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary mt-2">Filtrar</button>
+        </form>
+      </div>
+      <div id="clientList" class="mt-4">
+        <h3>Lista de Clientes</h3>
+        <table id="clientTable" class="table table-bordered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Documento</th>
+              <th>Obra Social ID</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Aquí se mostrarán los clientes a través de JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="../js/soporte-clientes/soporte-cliente.js"></script>
+  <script src="../js/login/login.js"></script>
+</body>
+</html>

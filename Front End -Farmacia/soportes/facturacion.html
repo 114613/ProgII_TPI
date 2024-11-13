@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas de Facturación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/soporte-cliente/soporte-cliente.css">
+    <link rel="stylesheet" href="../css/facturacion/facturacion.css"> 
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Farmaceutica</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../navegacion/nav.empleado.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../alumnos/alumnos.html">Alumnos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../ventas/ventas.html">Ventas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../dashboard/dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Soporte
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../soportes/clientes.html">Clientes</a></li>
+                  <li><a class="dropdown-item" href="../soportes/medicamentos.html">Medicamentos</a></li>
+                  <li><a class="dropdown-item" href="../soportes/empleados.html">Empleados</a></li>
+                  <li><a class="dropdown-item" href="../soportes/facturacion.html">Facturacion</a></li>
+                </ul>
+              </li>
+            </ul>
+            <button class="btn btn-danger ms-auto" onclick="logout()">Cerrar sesión</button>
+          </div>
+        </div>
+      </nav>
+    <h1>Consulta de Facturas</h1>
+
+    <div>
+        <label for="searchType">Filtrar por:</label>
+        <select id="searchType">
+            <option value="all">Todos</option>
+            <option value="nro">Por Número de Factura</option>
+            <option value="fecha">Por Fecha</option>
+            <option value="cliente">Por ID de Cliente</option>
+            <option value="empleado">Por ID de Empleado</option>
+        </select>
+
+        <input type="text" id="searchInput" placeholder="Ingrese filtro..." />
+        <button id="searchBtn">Buscar</button>
+    </div>
+
+    <table id="facturaTable">
+        <thead>
+            <tr>
+                <th>Número de Factura</th>
+                <th>Fecha</th>
+                <th>ID Cliente</th>
+                <th>ID Empleado</th>
+                <th>Medicamento</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se mostrarán los datos de las facturas -->
+        </tbody>
+    </table>
+    
+
+    <script src="../js/soporte-facturacion/soporte-facturacion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

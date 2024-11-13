@@ -1587,7 +1587,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
+          "Microsoft.EntityFrameworkCore": "8.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10"
         },
         "compile": {
           "bin/placeholder/FarmaciaLibrary.dll": {}
@@ -4476,19 +4477,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gabriel\\.nuget\\packages\\": {}
+    "C:\\Users\\Practical Tecno\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\WebApiFarmacia.csproj",
+      "projectUniqueName": "C:\\Users\\Practical Tecno\\Desktop\\ProgII_TPI\\WebApiFarmacia\\WebApiFarmacia.csproj",
       "projectName": "WebApiFarmacia",
-      "projectPath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\WebApiFarmacia.csproj",
-      "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-      "outputPath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\obj\\",
+      "projectPath": "C:\\Users\\Practical Tecno\\Desktop\\ProgII_TPI\\WebApiFarmacia\\WebApiFarmacia.csproj",
+      "packagesPath": "C:\\Users\\Practical Tecno\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Practical Tecno\\Desktop\\ProgII_TPI\\WebApiFarmacia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Practical Tecno\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4503,8 +4504,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj": {
-              "projectPath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj"
+            "C:\\Users\\Practical Tecno\\Desktop\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj": {
+              "projectPath": "C:\\Users\\Practical Tecno\\Desktop\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj"
             }
           }
         }

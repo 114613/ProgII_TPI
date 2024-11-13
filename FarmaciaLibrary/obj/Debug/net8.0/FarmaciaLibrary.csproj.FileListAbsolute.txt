@@ -11,3 +11,18 @@ G:\Gabriel\Programación\UTN\Segundo Cuatrimestre 2024\Programacion II\TPI\ProgI
 G:\Gabriel\Programación\UTN\Segundo Cuatrimestre 2024\Programacion II\TPI\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\refint\FarmaciaLibrary.dll
 G:\Gabriel\Programación\UTN\Segundo Cuatrimestre 2024\Programacion II\TPI\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.pdb
 G:\Gabriel\Programación\UTN\Segundo Cuatrimestre 2024\Programacion II\TPI\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\ref\FarmaciaLibrary.dll
+C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\bin\Debug\net8.0\FarmaciaLibrary.deps.json
+C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\bin\Debug\net8.0\FarmaciaLibrary.runtimeconfig.json
+C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\bin\Debug\net8.0\FarmaciaLibrary.dll
+C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\bin\Debug\net8.0\FarmaciaLibrary.pdb
+C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.csproj.AssemblyReference.cache
+C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.AssemblyInfoInputs.cache
+C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.AssemblyInfo.cs
+C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.sourcelink.json
+C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.dll
+C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\refint\FarmaciaLibrary.dll
+C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.pdb
+C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.genruntimeconfig.cache
+C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\ref\FarmaciaLibrary.dll

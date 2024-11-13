@@ -1,19 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\",
+  "WorkspaceRootPath": "C:\\Users\\Practical Tecno\\Desktop\\ProgII_TPI\\WebApiFarmacia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45253459-B582-4599-BC43-98F97ACE1CF3}|..\\FarmaciaLibrary\\FarmaciaLibrary.csproj|g:\\gabriel\\programaci\u00F3n\\utn\\segundo cuatrimestre 2024\\programacion ii\\tpi\\progii_tpi\\farmacialibrary\\repository\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45253459-B582-4599-BC43-98F97ACE1CF3}|..\\FarmaciaLibrary\\FarmaciaLibrary.csproj|g:\\gabriel\\programaci\u00F3n\\utn\\segundo cuatrimestre 2024\\programacion ii\\tpi\\progii_tpi\\farmacialibrary\\repository\\medicamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45253459-B582-4599-BC43-98F97ACE1CF3}|..\\FarmaciaLibrary\\FarmaciaLibrary.csproj|g:\\gabriel\\programaci\u00F3n\\utn\\segundo cuatrimestre 2024\\programacion ii\\tpi\\progii_tpi\\farmacialibrary\\repository\\imedicamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A51BDF3E-7AC9-4EF9-A5A6-6AFAAA1E28FE}|WebApiFarmacia.csproj|g:\\gabriel\\programaci\u00F3n\\utn\\segundo cuatrimestre 2024\\programacion ii\\tpi\\progii_tpi\\webapifarmacia\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A51BDF3E-7AC9-4EF9-A5A6-6AFAAA1E28FE}|WebApiFarmacia.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A51BDF3E-7AC9-4EF9-A5A6-6AFAAA1E28FE}|WebApiFarmacia.csproj|c:\\users\\practical tecno\\desktop\\progii_tpi\\webapifarmacia\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A51BDF3E-7AC9-4EF9-A5A6-6AFAAA1E28FE}|WebApiFarmacia.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,58 +14,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ClienteRepository.cs",
-              "DocumentMoniker": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Repository\\ClienteRepository.cs",
-              "RelativeDocumentMoniker": "..\\FarmaciaLibrary\\Repository\\ClienteRepository.cs",
-              "ToolTip": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Repository\\ClienteRepository.cs",
-              "RelativeToolTip": "..\\FarmaciaLibrary\\Repository\\ClienteRepository.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAlwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T23:33:50.468Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IMedicamentoRepository.cs",
-              "DocumentMoniker": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Repository\\IMedicamentoRepository.cs",
-              "RelativeDocumentMoniker": "..\\FarmaciaLibrary\\Repository\\IMedicamentoRepository.cs",
-              "ToolTip": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Repository\\IMedicamentoRepository.cs",
-              "RelativeToolTip": "..\\FarmaciaLibrary\\Repository\\IMedicamentoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T23:33:09.823Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MedicamentoRepository.cs",
-              "DocumentMoniker": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Repository\\MedicamentoRepository.cs",
-              "RelativeDocumentMoniker": "..\\FarmaciaLibrary\\Repository\\MedicamentoRepository.cs",
-              "ToolTip": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Repository\\MedicamentoRepository.cs",
-              "RelativeToolTip": "..\\FarmaciaLibrary\\Repository\\MedicamentoRepository.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T23:33:09.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T18:20:21.981Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Practical Tecno\\Desktop\\ProgII_TPI\\WebApiFarmacia\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Practical Tecno\\Desktop\\ProgII_TPI\\WebApiFarmacia\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-13T20:19:59.002Z",
               "EditorCaption": ""
             }
           ]

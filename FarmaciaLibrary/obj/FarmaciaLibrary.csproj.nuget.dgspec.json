@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj": {}
+    "C:\\Users\\Practical Tecno\\Desktop\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj": {}
   },
   "projects": {
-    "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj": {
+    "C:\\Users\\Practical Tecno\\Desktop\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Practical Tecno\\Desktop\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj",
         "projectName": "FarmaciaLibrary",
-        "projectPath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj",
-        "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-        "outputPath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\obj\\",
+        "projectPath": "C:\\Users\\Practical Tecno\\Desktop\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj",
+        "packagesPath": "C:\\Users\\Practical Tecno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Practical Tecno\\Desktop\\ProgII_TPI\\FarmaciaLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Practical Tecno\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -46,9 +46,19 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
             }
           },
           "imports": [

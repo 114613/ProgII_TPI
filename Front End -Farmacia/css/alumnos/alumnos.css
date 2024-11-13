@@ -1,0 +1,158 @@
+/* Estilo General */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-center {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Estilo para la fila de tarjetas */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Estilo para cada columna (tarjeta) */
+.col {
+    flex: 0 0 calc(33.333% - 20px); /* 3 columnas */
+    box-sizing: border-box;
+}
+
+/* Estilo de la tarjeta */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Estilo para la imagen del poster */
+.poster img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+/* Detalles del card */
+.details {
+    padding: 20px;
+}
+
+/* Título y subtítulo */
+.title-alumno {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitle-alumno {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Estilo de la rating */
+.rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rating i {
+    color: #FFD700;
+    font-size: 1rem;
+    margin-right: 3px;
+}
+
+.rating span {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Estilo para las etiquetas */
+.tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.tag {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: #333;
+}
+
+.tag:hover {
+    background-color: #ddd;
+}
+
+/* Descripción del miembro */
+.desc {
+    font-size: 0.875rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Estilo para la lista de miembros habilitados */
+.cast {
+    margin-top: 10px;
+}
+
+.habilited {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.cast ul {
+    display: flex;
+    gap: 10px;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.cast ul li img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Medios responsivos */
+@media (max-width: 1200px) {
+    .col {
+        flex: 0 0 calc(50% - 20px); /* 2 columnas en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .col {
+        flex: 0 0 100%; /* 1 columna en pantallas muy pequeñas */
+    }
+}

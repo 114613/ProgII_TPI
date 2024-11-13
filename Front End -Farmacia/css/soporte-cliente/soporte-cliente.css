@@ -1,0 +1,178 @@
+/* soporte-cliente.css */
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #28a745;
+}
+.navbar-brand, .nav-link {
+  color: #fff !important;
+}
+.navbar .btn-danger {
+  margin-left: auto;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Títulos */
+h2, h3 {
+  color: #28a745;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Botón de Agregar Cliente */
+#addClientBtn {
+  display: inline-block;
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#addClientBtn:hover {
+  background-color: #218838;
+}
+
+/* Formulario de cliente */
+#clientForm {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+#clientForm.hidden {
+  display: none;
+}
+#clientForm div {
+  margin-bottom: 15px;
+}
+#clientForm label {
+  display: block;
+  font-weight: bold;
+}
+#clientForm input[type="text"],
+#clientForm input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#clientForm button[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#clientForm button[type="submit"]:hover {
+  background-color: #218838;
+}
+#clientForm button[type="button"] {
+  background-color: #6c757d;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#clientForm button[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+/* Tabla de clientes */
+#clientList {
+  margin-top: 30px;
+}
+#clientList table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+#clientList th,
+#clientList td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+#clientList th {
+  background-color: #28a745;
+  color: white;
+}
+#clientList tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Botones de acción en la tabla */
+.btn-edit, .btn-delete {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-edit {
+  background-color: #ffc107;
+}
+.btn-edit:hover {
+  background-color: #e0a800;
+}
+.btn-delete {
+  background-color: #dc3545;
+}
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Reducir el padding del formulario en pantallas pequeñas */
+  #clientForm {
+    padding: 15px;
+  }
+
+  /* Ajuste en la tabla */
+  #clientList th, #clientList td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Ajuste en la tabla para pantallas muy pequeñas */
+  #clientList th, #clientList td {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  /* Ajustar los botones para pantallas pequeñas */
+  #clientForm button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* Clases para la ocultación */
+.hidden {
+  display: none;
+}
