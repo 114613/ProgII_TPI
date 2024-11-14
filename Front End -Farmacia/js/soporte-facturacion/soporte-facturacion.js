@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const facturaTableBody = document.querySelector("#facturaTable tbody");
 
     // URL de la API (reemplaza con tu API real)
-    const apiUrl = 'https://tudominio.com/api/facturas'; // Cambia esto por la URL de tu API
+    const apiUrl = 'https://localhost:7258/api/Factura'; // Cambia esto por la URL de tu API
 
     // Función para obtener las facturas desde la API según el filtro
     function getFacturas(filterType, filterValue) {

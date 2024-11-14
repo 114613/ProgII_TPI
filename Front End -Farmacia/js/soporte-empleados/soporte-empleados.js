@@ -3,7 +3,7 @@ const form = document.getElementById("empleadoForm");
 const table = document.getElementById("employeeTable").getElementsByTagName("tbody")[0];
 
 // URL de tu API
-const apiUrl = "https://tu-api.com/empleados";  // Reemplázalo con tu URL de la API
+const apiUrl = "https://localhost:7258/api/Empleado";  // Reemplázalo con tu URL de la API
 
 // Referencias a los filtros
 const searchFilter = document.getElementById("searchFilter");

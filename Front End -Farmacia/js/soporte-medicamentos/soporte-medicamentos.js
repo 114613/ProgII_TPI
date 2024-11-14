@@ -1,12 +1,16 @@
+fetchMedicamentos();
 document.addEventListener("DOMContentLoaded", () => {
-  const medicamentoForm = document.getElementById("medicamentoForm");
+  
+    const apiUrl = 'https://localhost:7258/api/Medicamento';
+  
+    const medicamentoForm = document.getElementById("medicamentoForm");
   const medicamentoTableBody = document.querySelector("#medicamentoTable tbody");
   const cancelBtn = document.getElementById("cancelBtn");
   const addMedicamentoBtn = document.getElementById("addMedicamentoBtn");
 
   let medicamentos = [];
   let editingMedicamentoIndex = null;
-  const apiUrl = 'https://tu-api-url.com/medicamentos'; // Aquí colocas la URL de tu API
+   // Aquí colocas la URL de tu API
 
   // Obtener medicamentos desde la API
   async function fetchMedicamentos() {

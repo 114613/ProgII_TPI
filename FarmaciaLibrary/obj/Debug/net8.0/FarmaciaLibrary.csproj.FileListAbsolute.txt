@@ -26,3 +26,5 @@ C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\ref
 C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.pdb
 C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.genruntimeconfig.cache
 C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\ref\FarmaciaLibrary.dll
+G:\Gabriel\Programación\UTN\Segundo Cuatrimestre 2024\Programacion II\TPI\ProgII_TPI\FarmaciaLibrary\bin\Debug\net8.0\FarmaciaLibrary.runtimeconfig.json
+G:\Gabriel\Programación\UTN\Segundo Cuatrimestre 2024\Programacion II\TPI\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.genruntimeconfig.cache

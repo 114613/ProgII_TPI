@@ -3,6 +3,14 @@ const USERS = [
     { username: 'empleado', password: 'empleado123', role: 'empleado' }
 ];
 
+document.addEventListener('DOMContentLoaded', () => {
+    const loginButton = document.getElementById('loginButton');
+    if (loginButton) {
+        loginButton.addEventListener('click', loginFunction);
+    }
+});
+
+
 // Función para generar un JWT (simulación en local, no seguro para producción)
 function generateJWT(user) {
     const payload = { username: user.username, role: user.role };

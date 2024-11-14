@@ -1,4 +1,5 @@
-﻿using FarmaciaLibrary.Models;
+﻿using Azure;
+using FarmaciaLibrary.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -46,27 +47,47 @@ namespace FarmaciaLibrary.Repository
 
         public async Task<List<Factura>>? GetAll()
         {
-            return await _context.Facturas.ToListAsync();
+            var response = await _context.Facturas
+                .Include(f => f.DetalleFacturas)
+                .ThenInclude(f => f.Medicamento)
+                .ToListAsync();
+            return response;
         }
 
         public async Task<List<Factura>>? GetByClient(int id)
         {
-            return await _context.Facturas.Where(f => f.IdCliente == id).ToListAsync();
+            var response = await _context.Facturas.Where(f => f.IdCliente == id)
+                .Include(f => f.DetalleFacturas)
+                .ThenInclude(f => f.Medicamento)
+                .ToListAsync();
+            return response;
         }
 
         public async Task<List<Factura>>? GetByDate(DateTime date)
         {
-            return await _context.Facturas.Where(f => f.FechaVenta.Equals(date)).ToListAsync();
+            var response = await _context.Facturas.Where(f => f.FechaVenta.Equals(date))
+                .Include(f => f.DetalleFacturas)
+                .ThenInclude(f => f.Medicamento)
+                .ToListAsync();
+            return response;
         }
 
         public async Task<List<Factura>>? GetByEmpleado(int id)
         {
-            return await _context.Facturas.Where(f => f.IdEmpleado == id).ToListAsync();
+            var response = await _context.Facturas
+                .Include(f => f.DetalleFacturas)
+                .ThenInclude(f => f.Medicamento)
+                .Where(f => f.IdEmpleado == id).ToListAsync();
+            return response;
         }
 
         public async Task<Factura>? GetById(int nro)
         {
-            return await _context.Facturas.Where(f => f.NroFactura == nro).FirstOrDefaultAsync();
+            var response = await _context.Facturas
+                .Include(f => f.DetalleFacturas)
+                .ThenInclude(f => f.Medicamento)
+                .FirstOrDefaultAsync(f => f.NroFactura == nro);
+            return response;
         }
 
         public async Task<bool> Update(int nro, Factura factura)

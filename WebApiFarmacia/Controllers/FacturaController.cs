@@ -23,7 +23,7 @@ namespace WebApiFarmacia.Controllers
             {
                 return Ok(await _repository.GetAll());
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 return StatusCode(500, "Ha ocurrido un error interno");

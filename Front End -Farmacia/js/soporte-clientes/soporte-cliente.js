@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let editingClientId = null;
 
-  const API_URL = 'https://tudominio.com/api/clients';
+  const API_URL = 'https://localhost:7258/api/Cliente';
 
   addClientBtn.addEventListener("click", () => {
     clientForm.classList.remove("hidden");
@@ -96,6 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       if (response.ok) {
         getClients();  // Actualizar la tabla después de eliminar
+        console.log("Lista de clientes actualizada"); // Agrega esto para verificar que se está llamando a getClients
       } else {
         console.error("Error al eliminar cliente");
       }
@@ -125,21 +126,32 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Editar cliente
-  function editClient(id_cliente) {
-    fetch(`${API_URL}/${id_cliente}`)
-      .then(response => response.json())
-      .then(client => {
-        document.getElementById("id_cliente").value = client.id_cliente;
-        document.getElementById("nombre").value = client.nombre;
-        document.getElementById("apellido").value = client.apellido;
-        document.getElementById("documento").value = client.documento;
-        document.getElementById("obra_social_id").value = client.obra_social_id;
-
-        clientForm.classList.remove("hidden");
-        formTitle.textContent = "Editar Cliente";
-        editingClientId = id_cliente;
-      })
-      .catch(error => console.error("Error al obtener los datos del cliente:", error));
+  async function editClient(idCliente) {
+    console.log("Editando cliente con ID:", idCliente); // Verifica que el ID esté bien
+    try {
+      const response = await fetch(`${API_URL}/${idCliente}`);
+      if (!response.ok) {
+        throw new Error("No se pudo obtener los datos del cliente");
+      }
+      const clientData = await response.json();
+  
+      // Mostrar el formulario con los datos actuales del cliente
+      clientForm.classList.remove("hidden");
+      formTitle.textContent = "Editar Cliente";
+  
+      // Llenar el formulario con los datos del cliente
+      document.getElementById("id_cliente").value = clientData.idCliente;
+      document.getElementById("nombre").value = clientData.nombre;
+      document.getElementById("apellido").value = clientData.apellido;
+      document.getElementById("documento").value = clientData.documento;
+      document.getElementById("obra_social_id").value = clientData.obraSocialId;
+  
+      // Establecer la variable para saber que estamos editando
+      editingClientId = idCliente;
+    } catch (error) {
+      console.error("Error al obtener el cliente para editar:", error);
+      alert("Ocurrió un error al intentar editar el cliente.");
+    }
   }
 
   // Resetear el formulario
