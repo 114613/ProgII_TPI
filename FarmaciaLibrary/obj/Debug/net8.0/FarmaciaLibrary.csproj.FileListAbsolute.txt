@@ -28,3 +28,18 @@ C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\Far
 C:\Users\Practical Tecno\Desktop\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\ref\FarmaciaLibrary.dll
 G:\Gabriel\Programación\UTN\Segundo Cuatrimestre 2024\Programacion II\TPI\ProgII_TPI\FarmaciaLibrary\bin\Debug\net8.0\FarmaciaLibrary.runtimeconfig.json
 G:\Gabriel\Programación\UTN\Segundo Cuatrimestre 2024\Programacion II\TPI\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.genruntimeconfig.cache
+D:\code\ProgII_TPI\FarmaciaLibrary\bin\Debug\net8.0\FarmaciaLibrary.deps.json
+D:\code\ProgII_TPI\FarmaciaLibrary\bin\Debug\net8.0\FarmaciaLibrary.runtimeconfig.json
+D:\code\ProgII_TPI\FarmaciaLibrary\bin\Debug\net8.0\FarmaciaLibrary.dll
+D:\code\ProgII_TPI\FarmaciaLibrary\bin\Debug\net8.0\FarmaciaLibrary.pdb
+D:\code\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.csproj.AssemblyReference.cache
+D:\code\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.AssemblyInfoInputs.cache
+D:\code\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.AssemblyInfo.cs
+D:\code\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.csproj.CoreCompileInputs.cache
+D:\code\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.sourcelink.json
+D:\code\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.dll
+D:\code\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\refint\FarmaciaLibrary.dll
+D:\code\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.pdb
+D:\code\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.genruntimeconfig.cache
+D:\code\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\ref\FarmaciaLibrary.dll

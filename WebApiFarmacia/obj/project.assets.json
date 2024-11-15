@@ -4477,19 +4477,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gabriel\\.nuget\\packages\\": {}
+    "C:\\Users\\nicoy\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\WebApiFarmacia.csproj",
+      "projectUniqueName": "D:\\code\\ProgII_TPI\\WebApiFarmacia\\WebApiFarmacia.csproj",
       "projectName": "WebApiFarmacia",
-      "projectPath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\WebApiFarmacia.csproj",
-      "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-      "outputPath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\obj\\",
+      "projectPath": "D:\\code\\ProgII_TPI\\WebApiFarmacia\\WebApiFarmacia.csproj",
+      "packagesPath": "C:\\Users\\nicoy\\.nuget\\packages\\",
+      "outputPath": "D:\\code\\ProgII_TPI\\WebApiFarmacia\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nicoy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4497,15 +4502,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj": {
-              "projectPath": "G:\\Gabriel\\Programación\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj"
+            "D:\\code\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj": {
+              "projectPath": "D:\\code\\ProgII_TPI\\FarmaciaLibrary\\FarmaciaLibrary.csproj"
             }
           }
         }
@@ -4518,8 +4522,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -4563,8 +4568,60 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Azure.Identity\" 1.10.3 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
+      "libraryId": "Azure.Identity",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Azure.Identity\" 1.10.3 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-wvxc-855f-jvrv",
+      "libraryId": "Azure.Identity",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Microsoft.Identity.Client\" 4.56.0 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
+      "libraryId": "Microsoft.Identity.Client",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1901",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Microsoft.Identity.Client\" 4.56.0 tiene una vulnerabilidad de gravedad baja conocida, https://github.com/advisories/GHSA-x674-v45j-fwxw",
+      "libraryId": "Microsoft.Identity.Client",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"System.Formats.Asn1\" 5.0.0 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-447r-wph3-92pm",
+      "libraryId": "System.Formats.Asn1",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

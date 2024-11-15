@@ -111,6 +111,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WebApiFarmacia.Controllers.ClienteController",
+    "Method": "GetObraSocialByCliente",
+    "RelativePath": "api/Cliente/GetObraSocialByCliente",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApiFarmacia.Controllers.DetalleFacturaController",
     "Method": "Get",
     "RelativePath": "api/DetalleFactura",
@@ -534,6 +550,32 @@
         "Name": "nombre",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiFarmacia.Controllers.SucursalController",
+    "Method": "Get",
+    "RelativePath": "api/Sucursal",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApiFarmacia.Controllers.SucursalController",
+    "Method": "Get",
+    "RelativePath": "api/Sucursal/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

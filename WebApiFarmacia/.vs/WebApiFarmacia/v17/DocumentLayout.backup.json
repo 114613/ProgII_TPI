@@ -1,32 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\",
+  "WorkspaceRootPath": "D:\\code\\ProgII_TPI\\WebApiFarmacia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45253459-B582-4599-BC43-98F97ACE1CF3}|..\\FarmaciaLibrary\\FarmaciaLibrary.csproj|g:\\gabriel\\programaci\u00F3n\\utn\\segundo cuatrimestre 2024\\programacion ii\\tpi\\progii_tpi\\farmacialibrary\\repository\\facturarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45253459-B582-4599-BC43-98F97ACE1CF3}|..\\FarmaciaLibrary\\FarmaciaLibrary.csproj|d:\\code\\progii_tpi\\farmacialibrary\\repository\\iclienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45253459-B582-4599-BC43-98F97ACE1CF3}|..\\FarmaciaLibrary\\FarmaciaLibrary.csproj|g:\\gabriel\\programaci\u00F3n\\utn\\segundo cuatrimestre 2024\\programacion ii\\tpi\\progii_tpi\\farmacialibrary\\models\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45253459-B582-4599-BC43-98F97ACE1CF3}|..\\FarmaciaLibrary\\FarmaciaLibrary.csproj|d:\\code\\progii_tpi\\farmacialibrary\\repository\\sucursalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45253459-B582-4599-BC43-98F97ACE1CF3}|..\\FarmaciaLibrary\\FarmaciaLibrary.csproj|g:\\gabriel\\programaci\u00F3n\\utn\\segundo cuatrimestre 2024\\programacion ii\\tpi\\progii_tpi\\farmacialibrary\\models\\detallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45253459-B582-4599-BC43-98F97ACE1CF3}|..\\FarmaciaLibrary\\FarmaciaLibrary.csproj|g:\\gabriel\\programaci\u00F3n\\utn\\segundo cuatrimestre 2024\\programacion ii\\tpi\\progii_tpi\\farmacialibrary\\repository\\detallefacturarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45253459-B582-4599-BC43-98F97ACE1CF3}|..\\FarmaciaLibrary\\FarmaciaLibrary.csproj|g:\\gabriel\\programaci\u00F3n\\utn\\segundo cuatrimestre 2024\\programacion ii\\tpi\\progii_tpi\\farmacialibrary\\repository\\medicamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A51BDF3E-7AC9-4EF9-A5A6-6AFAAA1E28FE}|WebApiFarmacia.csproj|g:\\gabriel\\programaci\u00F3n\\utn\\segundo cuatrimestre 2024\\programacion ii\\tpi\\progii_tpi\\webapifarmacia\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A51BDF3E-7AC9-4EF9-A5A6-6AFAAA1E28FE}|WebApiFarmacia.csproj|d:\\code\\progii_tpi\\webapifarmacia\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A51BDF3E-7AC9-4EF9-A5A6-6AFAAA1E28FE}|WebApiFarmacia.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45253459-B582-4599-BC43-98F97ACE1CF3}|..\\FarmaciaLibrary\\FarmaciaLibrary.csproj|g:\\gabriel\\programaci\u00F3n\\utn\\segundo cuatrimestre 2024\\programacion ii\\tpi\\progii_tpi\\farmacialibrary\\models\\medicamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A51BDF3E-7AC9-4EF9-A5A6-6AFAAA1E28FE}|WebApiFarmacia.csproj|d:\\code\\progii_tpi\\webapifarmacia\\controllers\\sucursalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A51BDF3E-7AC9-4EF9-A5A6-6AFAAA1E28FE}|WebApiFarmacia.csproj|solutionrelative:controllers\\sucursalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A51BDF3E-7AC9-4EF9-A5A6-6AFAAA1E28FE}|WebApiFarmacia.csproj|g:\\gabriel\\programaci\u00F3n\\utn\\segundo cuatrimestre 2024\\programacion ii\\tpi\\progii_tpi\\webapifarmacia\\controllers\\facturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A51BDF3E-7AC9-4EF9-A5A6-6AFAAA1E28FE}|WebApiFarmacia.csproj|solutionrelative:controllers\\facturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45253459-B582-4599-BC43-98F97ACE1CF3}|..\\FarmaciaLibrary\\FarmaciaLibrary.csproj|d:\\code\\progii_tpi\\farmacialibrary\\repository\\isucursalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45253459-B582-4599-BC43-98F97ACE1CF3}|..\\FarmaciaLibrary\\FarmaciaLibrary.csproj|d:\\code\\progii_tpi\\farmacialibrary\\repository\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51BDF3E-7AC9-4EF9-A5A6-6AFAAA1E28FE}|WebApiFarmacia.csproj|d:\\code\\progii_tpi\\webapifarmacia\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A51BDF3E-7AC9-4EF9-A5A6-6AFAAA1E28FE}|WebApiFarmacia.csproj|solutionrelative:controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,110 +34,104 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DetalleFacturaRepository.cs",
-              "DocumentMoniker": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Repository\\DetalleFacturaRepository.cs",
-              "RelativeDocumentMoniker": "..\\FarmaciaLibrary\\Repository\\DetalleFacturaRepository.cs",
-              "ToolTip": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Repository\\DetalleFacturaRepository.cs",
-              "RelativeToolTip": "..\\FarmaciaLibrary\\Repository\\DetalleFacturaRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T20:35:09.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MedicamentoRepository.cs",
-              "DocumentMoniker": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Repository\\MedicamentoRepository.cs",
-              "RelativeDocumentMoniker": "..\\FarmaciaLibrary\\Repository\\MedicamentoRepository.cs",
-              "ToolTip": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Repository\\MedicamentoRepository.cs",
-              "RelativeToolTip": "..\\FarmaciaLibrary\\Repository\\MedicamentoRepository.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T20:34:50.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Medicamento.cs",
-              "DocumentMoniker": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Models\\Medicamento.cs",
-              "RelativeDocumentMoniker": "..\\FarmaciaLibrary\\Models\\Medicamento.cs",
-              "ToolTip": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Models\\Medicamento.cs",
-              "RelativeToolTip": "..\\FarmaciaLibrary\\Models\\Medicamento.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "D:\\code\\ProgII_TPI\\WebApiFarmacia\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClienteController.cs",
+              "ToolTip": "D:\\code\\ProgII_TPI\\WebApiFarmacia\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "Controllers\\ClienteController.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAUwLUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T20:31:58.544Z",
+              "WhenOpened": "2024-11-14T21:37:07.529Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Title": "ClienteRepository.cs",
+              "DocumentMoniker": "D:\\code\\ProgII_TPI\\FarmaciaLibrary\\Repository\\ClienteRepository.cs",
+              "RelativeDocumentMoniker": "..\\FarmaciaLibrary\\Repository\\ClienteRepository.cs",
+              "ToolTip": "D:\\code\\ProgII_TPI\\FarmaciaLibrary\\Repository\\ClienteRepository.cs",
+              "RelativeToolTip": "..\\FarmaciaLibrary\\Repository\\ClienteRepository.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAkwF4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T20:13:51.824Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DetalleFactura.cs",
-              "DocumentMoniker": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Models\\DetalleFactura.cs",
-              "RelativeDocumentMoniker": "..\\FarmaciaLibrary\\Models\\DetalleFactura.cs",
-              "ToolTip": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Models\\DetalleFactura.cs",
-              "RelativeToolTip": "..\\FarmaciaLibrary\\Models\\DetalleFactura.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T20:05:00.334Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Factura.cs",
-              "DocumentMoniker": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Models\\Factura.cs",
-              "RelativeDocumentMoniker": "..\\FarmaciaLibrary\\Models\\Factura.cs",
-              "ToolTip": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Models\\Factura.cs",
-              "RelativeToolTip": "..\\FarmaciaLibrary\\Models\\Factura.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T19:43:39.592Z",
+              "WhenOpened": "2024-11-14T21:19:10.649Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FacturaRepository.cs",
-              "DocumentMoniker": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Repository\\FacturaRepository.cs",
-              "RelativeDocumentMoniker": "..\\FarmaciaLibrary\\Repository\\FacturaRepository.cs",
-              "ToolTip": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\FarmaciaLibrary\\Repository\\FacturaRepository.cs",
-              "RelativeToolTip": "..\\FarmaciaLibrary\\Repository\\FacturaRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAMwFkAAAAcAAAAAAAAAA==",
+              "Title": "IClienteRepository.cs",
+              "DocumentMoniker": "D:\\code\\ProgII_TPI\\FarmaciaLibrary\\Repository\\IClienteRepository.cs",
+              "RelativeDocumentMoniker": "..\\FarmaciaLibrary\\Repository\\IClienteRepository.cs",
+              "ToolTip": "D:\\code\\ProgII_TPI\\FarmaciaLibrary\\Repository\\IClienteRepository.cs",
+              "RelativeToolTip": "..\\FarmaciaLibrary\\Repository\\IClienteRepository.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwBIAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T19:31:36.545Z",
+              "WhenOpened": "2024-11-14T21:45:24.627Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FacturaController.cs",
-              "DocumentMoniker": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\Controllers\\FacturaController.cs",
-              "RelativeDocumentMoniker": "Controllers\\FacturaController.cs",
-              "ToolTip": "G:\\Gabriel\\Programaci\u00F3n\\UTN\\Segundo Cuatrimestre 2024\\Programacion II\\TPI\\ProgII_TPI\\WebApiFarmacia\\Controllers\\FacturaController.cs",
-              "RelativeToolTip": "Controllers\\FacturaController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAgwBkAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\code\\ProgII_TPI\\WebApiFarmacia\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\code\\ProgII_TPI\\WebApiFarmacia\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T18:26:06.577Z",
+              "WhenOpened": "2024-11-14T23:58:11.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SucursalController.cs",
+              "DocumentMoniker": "D:\\code\\ProgII_TPI\\WebApiFarmacia\\Controllers\\SucursalController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SucursalController.cs",
+              "ToolTip": "D:\\code\\ProgII_TPI\\WebApiFarmacia\\Controllers\\SucursalController.cs",
+              "RelativeToolTip": "Controllers\\SucursalController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T23:57:20.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ISucursalRepository.cs",
+              "DocumentMoniker": "D:\\code\\ProgII_TPI\\FarmaciaLibrary\\Repository\\ISucursalRepository.cs",
+              "RelativeDocumentMoniker": "..\\FarmaciaLibrary\\Repository\\ISucursalRepository.cs",
+              "ToolTip": "D:\\code\\ProgII_TPI\\FarmaciaLibrary\\Repository\\ISucursalRepository.cs",
+              "RelativeToolTip": "..\\FarmaciaLibrary\\Repository\\ISucursalRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T23:56:43.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SucursalRepository.cs",
+              "DocumentMoniker": "D:\\code\\ProgII_TPI\\FarmaciaLibrary\\Repository\\SucursalRepository.cs",
+              "RelativeDocumentMoniker": "..\\FarmaciaLibrary\\Repository\\SucursalRepository.cs",
+              "ToolTip": "D:\\code\\ProgII_TPI\\FarmaciaLibrary\\Repository\\SucursalRepository.cs*",
+              "RelativeToolTip": "..\\FarmaciaLibrary\\Repository\\SucursalRepository.cs*",
+              "ViewState": "AgIAAAoAAAAAAAAAAIA1wB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T23:55:57.656Z",
               "EditorCaption": ""
             }
           ]

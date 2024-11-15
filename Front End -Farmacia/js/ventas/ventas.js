@@ -1,83 +1,87 @@
+let VariableRandom = "hola";
 // Variables para manejar la tabla de productos y el total
 let productosAgregados = [];
 let productoEditando = null;  // Variable para saber qué producto estamos editando
+let ClienteId = 0;
+let apiClientesURL = "https://localhost:44361/api/Cliente";
+let apiMedicamentosURL = "https://localhost:44361/api/Medicamento";
+let apiSucursalesURL = "https://localhost:44361/api/Sucursal";
+let Medicamentos;
+
 
 // Función para cargar las opciones desde la API
-async function cargarOpciones() {
+async function cargarClientes() {
     try {
         // Obtener clientes desde la API
-        const clientesResponse = await fetch('https://localhost:7258/api/Cliente'); // Asumiendo que esta es la URL de la API
-        const clientes = await clientesResponse.json();
+        const clientesResponse = await fetch(apiClientesURL); // Asumiendo que esta es la URL de la API
+        const clientes = await clientesResponse.json().then(function (res) {return res} );
 
         // Cargar opciones para el cliente
         const clienteSelect = document.getElementById('cliente');
         clientes.forEach(cliente => {
             const option = document.createElement('option');
-            option.value = cliente.id;
+            option.value = cliente.idCliente;
             option.textContent = cliente.nombre;
             clienteSelect.appendChild(option);
         });
 
-        // Obtener obras sociales desde la API
-        //const obrasSocialesResponse = await fetch('/api/obrasSociales'); // URL de la API de obras sociales
-        //const obrasSociales = await obrasSocialesResponse.json();
-
-        // Cargar opciones para la obra social
-        // const obraSocialSelect = document.getElementById('obraSocial');
-        // obrasSociales.forEach(obra => {
-        //     const option = document.createElement('option');
-        //     option.value = obra.id;
-        //     option.textContent = obra.nombre;
-        //     obraSocialSelect.appendChild(option);
-        // });
-
-        // // Obtener sucursales desde la API
-        // const sucursalesResponse = await fetch('/api/sucursales'); // URL de la API de sucursales
-        // const sucursales = await sucursalesResponse.json();
-
-        // // Cargar opciones para la sucursal
-        // const sucursalSelect = document.getElementById('sucursal');
-        // sucursales.forEach(sucursal => {
-        //     const option = document.createElement('option');
-        //     option.value = sucursal.id;
-        //     option.textContent = sucursal.nombre;
-        //     sucursalSelect.appendChild(option);
-        // });
-
-        // Obtener medicamentos desde la API
-        const medicamentosResponse = await fetch('https://localhost:7258/api/Medicamento'); // URL de la API de medicamentos
-        const medicamentos = await medicamentosResponse.json();
-
-        // Cargar opciones para el medicamento
-        const medicamentoSelect = document.getElementById('medicamento');
-        medicamentos.forEach(medicamento => {
-            const option = document.createElement('option');
-            option.value = medicamento.id;
-            option.textContent = medicamento.nombre;
-            medicamentoSelect.appendChild(option);
-        });
 
     } catch (error) {
         console.error("Error al cargar las opciones: ", error);
     }
 }
 
+function onChangeCliente() {
+    let valor = document.getElementById('cliente').value;
+    ClienteId = valor;
+    cargarObraSocial();
+}
+
+async function cargarObraSocial(){
+    // Obtener obras sociales desde la API
+    const obraSocialDescripcionResponse = await fetch(apiClientesURL + `/GetObraSocialByCliente?id=${ClienteId}`); // URL de la API de obras sociales
+    const obraSocialDescripcion = await obraSocialDescripcionResponse.text();
+    document.getElementById('obraSocial').value = obraSocialDescripcion;
+}
+
+async function cargarSucursales() {
+    const response = await fetch(apiSucursalesURL);
+    const sucursales = await response.json();
+    
+    const sucursalesCombo = document.getElementById('sucursal');
+    sucursales.forEach(sucursal => {
+        const option = document.createElement('option');
+        option.value = sucursal.idSucursal;
+        option.textContent = sucursal.direccion;
+        sucursalesCombo.appendChild(option);
+    });
+
+}
+
+async function cargarMedicamentos(){
+    const response = await fetch(apiMedicamentosURL);
+    const medicamentos = await response.json();
+    
+    const medicamentosCombo = document.getElementById('medicamento');
+    medicamentos.forEach(medicamento => {
+        const option = document.createElement('option');
+        option.value = medicamento.medicamentoId;
+        option.textContent = medicamento.nombre;
+        medicamentosCombo.appendChild(option);
+    });
+
+    Medicamentos = medicamentos;
+}
+
 // Función para cargar el precio del medicamento seleccionado
-async function cargarPrecio() {
-    const medicamentoSelect = document.getElementById('medicamento');
-    const precioInput = document.getElementById('precio');
-    const medicamentoId = medicamentoSelect.value;
+async function onChangeMedicamento() {
+    let medicamentoSeleccionado = document.getElementById('medicamento').value;
 
-    try {
-        const medicamentoResponse = await fetch(`https://localhost:7258/api/Medicamento${medicamentoId}`); // URL de la API para obtener un medicamento por ID
-        const medicamento = await medicamentoResponse.json();
-
-        if (medicamento) {
-            precioInput.value = medicamento.precio;
+    Medicamentos.forEach(medicamento => {
+        if (medicamento.medicamentoId == medicamentoSeleccionado){
+            document.getElementById('precio').value = medicamento.precio;
         }
-    } catch (error) {
-        console.error("Error al cargar el precio: ", error);
-    }
+    })
 }
 
 // Función para agregar un producto a la tabla
@@ -162,4 +166,6 @@ function eliminarProducto(index) {
 }
 
 // Llamar a la función para cargar los datos al iniciar
-cargarOpciones();
+cargarClientes();
+cargarMedicamentos();
+cargarSucursales();

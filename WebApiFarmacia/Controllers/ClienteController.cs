@@ -159,5 +159,26 @@ namespace WebApiFarmacia.Controllers
                 return StatusCode(500, "Ocurrio un error interno");
             }
         }
+
+        [HttpGet("GetObraSocialByCliente")]
+        public async Task<IActionResult> GetObraSocialByCliente(int id)
+        {
+            try
+            {
+                if (id != 0)
+                {
+                    return Ok(await _repository.GetObraSocialByCliente(id));
+                }
+                else
+                {
+                    return BadRequest($"No se a encontrado el cliente con el id {id}");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(500, "Ocurrio un error interno");
+            }
+        }
     }
 }

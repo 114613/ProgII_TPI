@@ -20,6 +20,6 @@ namespace FarmaciaLibrary.Repository
 
         //Baja lógica
         Task<bool> Delete(int id);
-
+        Task<string> GetObraSocialByCliente(int id);
     }
 }

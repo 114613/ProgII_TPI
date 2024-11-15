@@ -82,5 +82,14 @@ namespace FarmaciaLibrary.Repository
                 return false;
             }
         }
+
+        public async Task<string> GetObraSocialByCliente(int id)
+        {
+            return await _context.Clientes
+                .Include(x => x.ObraSocial)
+                .Where(x => x.IdCliente == id)
+                .Select(x => x.ObraSocial.Nombre)
+                .FirstOrDefaultAsync() ?? "";
+        }
     }
 }

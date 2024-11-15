@@ -19,6 +19,7 @@ builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 builder.Services.AddScoped<IEmpleadoRepository, EmpleadoRepository>();
 builder.Services.AddScoped<IDetalleFacturaRepository, DetalleFacturaRepository>();
 builder.Services.AddScoped<IFacturaRepository, FacturaRepository>();
+builder.Services.AddScoped<ISucursalRepository, SucursalRepository>();
 
 
 // Configuración de CORS

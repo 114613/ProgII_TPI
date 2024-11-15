@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "ne4pYEX0QHNHhVAp7UmmlYy14smsYe99bhlz0pU7BFE=",
+  "Hash": "ShcsJgBFsYSqUqMpZz23WGA2Y0/qudXKt+aShgZfdcg=",
   "Source": "WebApiFarmacia",
   "BasePath": "_content/WebApiFarmacia",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
