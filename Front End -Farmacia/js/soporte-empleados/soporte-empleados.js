@@ -3,11 +3,11 @@ const form = document.getElementById("empleadoForm");
 const table = document.getElementById("employeeTable").getElementsByTagName("tbody")[0];
 
 // URL de tu API
-const apiUrl = "https://localhost:7258/api/Empleado";  // Reemplázalo con tu URL de la API
+const apiUrl = "https://localhost:44361/api/Empleado";  // Reemplázalo con tu URL de la API
 
 // Referencias a los filtros
-const searchFilter = document.getElementById("searchFilter");
-const searchQuery = document.getElementById("searchQuery");
+const searchFilter = document.getElementById("filterEmployeeType");
+const searchQuery = document.getElementById("filterEmployeeName");
 
 // Función para ocultar el formulario
 function hideForm() {
@@ -23,8 +23,8 @@ function showForm() {
 
 // Función para resetear el formulario
 function resetForm() {
-  form.reset(); // Resetea todos los campos, excepto los botones
-  document.getElementById("empleadoId").value = ''; // Asegurarse de que el ID esté vacío
+  //form.reset(); // Resetea todos los campos, excepto los botones
+  const i = document.getElementById("empleadoId").value; // Asegurarse de que el ID esté vacío
 }
 
 // Función para manejar el submit del formulario (agregar o editar un empleado)
@@ -75,6 +75,7 @@ async function addEmployeeToTable(employee) {
     
     const newEmployee = await response.json();
     renderEmployeeTable([newEmployee]);
+    fetchEmployees();
   } catch (error) {
     console.error("Error al agregar empleado:", error);
   }
@@ -93,6 +94,7 @@ async function editEmployee(id, updatedEmployee) {
 
     const updatedEmp = await response.json();
     renderEmployeeTable([updatedEmp]);
+    fetchEmployees();
   } catch (error) {
     console.error("Error al editar empleado:", error);
   }
@@ -118,7 +120,7 @@ function renderEmployeeTable(employees) {
   // Recorrer los empleados y agregar las filas a la tabla
   employees.forEach(employee => {
     const row = table.insertRow();
-    row.insertCell(0).textContent = employee.id; // ID
+    row.insertCell(0).textContent = employee.idEmpleado; // ID
     row.insertCell(1).textContent = employee.nombre;
     row.insertCell(2).textContent = employee.apellido;
     row.insertCell(3).textContent = employee.documento;
@@ -133,7 +135,7 @@ function renderEmployeeTable(employees) {
     editBtn.onclick = function() {
       showForm();
       document.getElementById("formTitle").textContent = "Editar Empleado";
-      document.getElementById("empleadoId").value = employee.id;
+      document.getElementById("empleadoId").value = employee.idEmpleado;
       document.getElementById("nombre").value = employee.nombre;
       document.getElementById("apellido").value = employee.apellido;
       document.getElementById("documento").value = employee.documento;
@@ -146,7 +148,7 @@ function renderEmployeeTable(employees) {
     deleteBtn.textContent = "Eliminar";
     deleteBtn.classList.add("btn", "btn-danger");
     deleteBtn.onclick = function() {
-      deleteEmployee(employee.id);
+      deleteEmployee(employee.idEmpleado);
     };
     actionsCell.appendChild(deleteBtn);
   });
@@ -171,13 +173,13 @@ function filterEmployees() {
   const query = searchQuery.value.toLowerCase();
 
   fetchEmployees().then(employees => {
-    let filteredEmployees;
+    let filteredEmployees = employees;
 
     // Filtrado según el tipo de búsqueda
     switch (filterType) {
       case 'id':
         filteredEmployees = employees.filter(employee => 
-          employee.id.toString().includes(query)
+          employee.idEmpleado.toString().includes(query)
         );
         break;
       case 'apellido':
@@ -185,20 +187,21 @@ function filterEmployees() {
           employee.apellido.toLowerCase().includes(query)
         );
         break;
-      case 'todos':
+      case 'all':
       default:
-        filteredEmployees = employees.filter(employee => 
-          employee.nombre.toLowerCase().includes(query) || 
-          employee.apellido.toLowerCase().includes(query) || 
-          employee.id.toString().includes(query)
-        );
+        filteredEmployees = employees
         break;
     }
 
     renderEmployeeTable(filteredEmployees);
+  }).catch(error => {
+    console.error("Error al filtrar empleados:", error);
   });
 }
+
 
 // Agregar event listener al filtro de tipo de búsqueda y campo de texto
 searchFilter.addEventListener("change", filterEmployees);
 searchQuery.addEventListener("input", filterEmployees);
+
+window.deleteEmployee = deleteEmployee;

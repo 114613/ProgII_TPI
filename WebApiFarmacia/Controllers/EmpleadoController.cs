@@ -132,19 +132,30 @@ namespace WebApiFarmacia.Controllers
         {
             try
             {
-                if(id != 0)
+                if (id != 0)
                 {
-                    return Ok(await _repository.Delete(id));
+                    var result = await _repository.Delete(id);
+                    if (result)
+                    {
+                        return Ok("Empleado eliminado correctamente.");
+                    }
+                    else
+                    {
+                        return BadRequest($"No se pudo eliminar el empleado con el id {id}.");
+                    }
                 }
                 else
                 {
-                    return BadRequest($"No se ha encontrado el empleado con el id {id}!");
+                    return BadRequest("El ID no puede ser 0.");
                 }
             }
             catch (Exception ex)
             {
+                // Loguea el error para fines de diagnóstico
+                Console.WriteLine($"Error: {ex.Message}");
                 return StatusCode(500, "Ha ocurrido un error interno.");
             }
         }
+
     }
 }

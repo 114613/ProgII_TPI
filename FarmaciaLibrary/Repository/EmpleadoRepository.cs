@@ -33,16 +33,19 @@ namespace FarmaciaLibrary.Repository
         public async Task<bool> Delete(int id)
         {
             var empleado = await GetById(id);
-            if(empleado != null)
+            if (empleado != null)
             {
                 _context.Empleados.Remove(empleado);
-                return await _context.SaveChangesAsync() > 0;
+                var result = await _context.SaveChangesAsync();
+                return result > 0;
             }
             else
             {
+                // Puedes loggear que el empleado no fue encontrado
                 return false;
             }
         }
+
 
         public async Task<List<Empleado>> GetAll()
         {

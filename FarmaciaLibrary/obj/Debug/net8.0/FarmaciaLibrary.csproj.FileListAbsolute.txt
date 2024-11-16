@@ -43,3 +43,17 @@ D:\code\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\refint\FarmaciaLibrary.dll
 D:\code\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.pdb
 D:\code\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.genruntimeconfig.cache
 D:\code\ProgII_TPI\FarmaciaLibrary\obj\Debug\net8.0\ref\FarmaciaLibrary.dll
+C:\Users\Joaquin\Desktop\ProgII_TPI-main\FarmaciaLibrary\bin\Debug\net8.0\FarmaciaLibrary.deps.json
+C:\Users\Joaquin\Desktop\ProgII_TPI-main\FarmaciaLibrary\bin\Debug\net8.0\FarmaciaLibrary.runtimeconfig.json
+C:\Users\Joaquin\Desktop\ProgII_TPI-main\FarmaciaLibrary\bin\Debug\net8.0\FarmaciaLibrary.dll
+C:\Users\Joaquin\Desktop\ProgII_TPI-main\FarmaciaLibrary\bin\Debug\net8.0\FarmaciaLibrary.pdb
+C:\Users\Joaquin\Desktop\ProgII_TPI-main\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.csproj.AssemblyReference.cache
+C:\Users\Joaquin\Desktop\ProgII_TPI-main\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Joaquin\Desktop\ProgII_TPI-main\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.AssemblyInfoInputs.cache
+C:\Users\Joaquin\Desktop\ProgII_TPI-main\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.AssemblyInfo.cs
+C:\Users\Joaquin\Desktop\ProgII_TPI-main\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Joaquin\Desktop\ProgII_TPI-main\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.dll
+C:\Users\Joaquin\Desktop\ProgII_TPI-main\FarmaciaLibrary\obj\Debug\net8.0\refint\FarmaciaLibrary.dll
+C:\Users\Joaquin\Desktop\ProgII_TPI-main\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.pdb
+C:\Users\Joaquin\Desktop\ProgII_TPI-main\FarmaciaLibrary\obj\Debug\net8.0\FarmaciaLibrary.genruntimeconfig.cache
+C:\Users\Joaquin\Desktop\ProgII_TPI-main\FarmaciaLibrary\obj\Debug\net8.0\ref\FarmaciaLibrary.dll

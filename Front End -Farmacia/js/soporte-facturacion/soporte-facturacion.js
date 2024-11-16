@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const facturaTableBody = document.querySelector("#facturaTable tbody");
 
     // URL de la API (reemplaza con tu API real)
-    const apiUrl = 'https://localhost:7258/api/Factura'; // Cambia esto por la URL de tu API
+    const apiUrl = 'https://localhost:44361/api/Factura'; // Cambia esto por la URL de tu API
 
     // Función para obtener las facturas desde la API según el filtro
     function getFacturas(filterType, filterValue) {
@@ -13,13 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Dependiendo del filtro seleccionado, ajustamos la URL
         if (filterType === "nro" && filterValue) {
-            url = `${apiUrl}?nroFactura=${filterValue}`;
+            url = apiUrl + "/" + filterValue;
         } else if (filterType === "fecha" && filterValue) {
-            url = `${apiUrl}?fecha=${filterValue}`;
+            url = apiUrl + "/fecha/" + filterValue;
         } else if (filterType === "cliente" && filterValue) {
-            url = `${apiUrl}?idCliente=${filterValue}`;
+            url = apiUrl + "/cliente/" + filterValue;
         } else if (filterType === "empleado" && filterValue) {
-            url = `${apiUrl}?idEmpleado=${filterValue}`;
+            url = apiUrl + "/empleado/" + filterValue;
+        } else { url = `${apiUrl}`;
         }
 
         console.log("Consultando API en la URL: ", url);  // Verifica la URL de la consulta
@@ -35,8 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(data => {
                 console.log("Respuesta de la API: ", data);  // Verifica la respuesta de la API
 
-                if (data.success) {
-                    updateFacturaTable(data.facturas); // Asegúrate de que la API devuelva un array de facturas en data.facturas
+                if (data!=null) {
+                    updateFacturaTable(data); // Asegúrate de que la API devuelva un array de facturas en data.facturas
                 } else {
                     alert('Error al obtener las facturas.');
                 }
@@ -47,17 +48,21 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     }
 
+    
+
     // Función para actualizar la tabla con las facturas
     function updateFacturaTable(facturas) {
+        if (!Array.isArray(facturas)) {
+            // Convertir a arreglo si es un solo objeto
+            facturas = facturas ? [facturas] : [];
+        }
         const rows = facturas.map(factura => `
             <tr>
                 <td>${factura.nroFactura}</td>
-                <td>${factura.fecha}</td>
+                <td>${factura.fechaVenta}</td>
                 <td>${factura.idCliente}</td>
                 <td>${factura.idEmpleado}</td>
-                <td>${factura.medico}</td> <!-- Aquí se agrega el medicamento -->
-                <td>${factura.precio}</td> <!-- Aquí se agrega el precio -->
-                <td>${factura.cantidad}</td> <!-- Aquí se agrega la cantidad -->
+                <td>${factura.formaPago}</td> <!-- Aquí se agrega la cantidad -->
                 <td>${factura.total}</td> <!-- Aquí se agrega el total -->
             </tr>
         `).join('');

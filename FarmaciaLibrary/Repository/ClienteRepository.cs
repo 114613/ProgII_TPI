@@ -46,7 +46,26 @@ namespace FarmaciaLibrary.Repository
 
         public async Task<List<Cliente>>? GetAll()
         {
-            return await _context.Clientes.Where(c => c.Activo == true).ToListAsync();
+            return await (from cliente in _context.Clientes
+                          join obraSocial in _context.ObrasSociales on cliente.ObraSocialId equals obraSocial.ObraSocialId
+                          where cliente.Activo == true
+                          select new Cliente
+                          {
+                              IdCliente = cliente.IdCliente,
+                              Nombre = cliente.Nombre,
+                              Apellido = cliente.Apellido,
+                              Documento = cliente.Documento,
+                              ObraSocialId = obraSocial.ObraSocialId,
+                              ObraSocial = obraSocial
+                          }).ToListAsync();
+
+            //    return await _context.Clientes.
+            //        Include(c => c.ObraSocial.Nombre)
+            //.Where(c => c.Activo == true)
+            //// Carga las facturas relacionadas
+            //.ToListAsync();
+
+            //return await _context.Clientes.Where(c => c.Activo == true).ToListAsync();
         }
 
         public async Task<Cliente>? GetByDocumento(int documento)

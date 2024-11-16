@@ -14,6 +14,8 @@ create table Empleados
  constraint pk_empleado primary key(id_empleado),
 );
 
+SELECT * FROM ObrasSociales
+update Clientes set obra_social_id = 2 where id_cliente = 6
 --obras sociales--
 CREATE TABLE ObrasSociales 
 (

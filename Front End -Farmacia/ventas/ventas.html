@@ -26,9 +26,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="#social">Ventas</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../dashboard/dashboard.html">Dashboard</a>
-              </li>
+             
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Soporte
@@ -69,28 +67,30 @@
         </form>
         
         <table id="productosTable">
-            <thead>
+            <thead> 
                 <tr>
                     <th>Medicamento</th>
                     <th>Cantidad</th>
                     <th>Precio Unitario</th>
                     <th>Descuento</th>
                     <th>Total</th>
-                    <th>Acción</th>
-                </tr>
+                    <th>Borrar</th>
+                    <th>Editar</th>
+                </tr>  
             </thead>
             <tbody></tbody>
         </table>
         
-        <div id="resumenVenta" class="hidden">
+        <div id="resumenVenta">
             <ul id="resumenProductos"></ul>
             <p>Total Venta: $<span id="totalVenta"></span></p>
-            <button type="button" onclick="procesarVenta()">Procesar Venta</button>
+            <button type="button" onclick="generarFactura()">Procesar Venta</button>
         </div>
         
         
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="../js/login/login.js"></script>
     <script src="../js/ventas/ventas.js"></script>
 </body>

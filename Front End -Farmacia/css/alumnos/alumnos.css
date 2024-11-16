@@ -13,11 +13,19 @@
 h1 {
     font-size: 2rem;
     margin-bottom: 10px;
+    color:#28a745;
 }
-
+.title-h1{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color:#000000;
+}
+.subtitle-p{
+    color:#000000;
+}
 p {
     font-size: 1rem;
-    color: #666;
+    
 }
 
 /* Estilo para la fila de tarjetas */

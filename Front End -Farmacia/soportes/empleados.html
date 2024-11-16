@@ -26,9 +26,7 @@
           <li class="nav-item">
             <a class="nav-link" href="../ventas/ventas.html">Ventas</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../dashboard/dashboard.html">Dashboard</a>
-          </li>
+          
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Soporte
@@ -70,23 +68,11 @@
           <label for="fechaIngreso" class="form-label">Fecha de Ingreso:</label>
           <input type="date" id="fechaIngreso" required class="form-control" />
         </div>
-        <button type="submit" class="btn btn-success mt-2">Guardar</button>
+        <button type="submit" onclick="GuardarEmpleado()" class="btn btn-success mt-2">Guardar</button>
         <button type="button" onclick="resetForm()" class="btn btn-secondary mt-2">Cancelar</button>
       </form>
       <!-- Formulario de Filtro -->
-      <div id="filterForm" class="mb-4">
-        <label for="filterEmployeeType">Filtrar por:</label>
-        <select id="filterEmployeeType" class="form-control">
-          <option value="all">Todos</option>
-          <option value="id">Por ID</option>
-          <option value="apellido">Por Apellido</option>
-        </select>
 
-        <label for="filterEmployeeName">Buscar Empleado:</label>
-        <input type="text" id="filterEmployeeName" class="form-control" placeholder="Nombre del empleado">
-        
-        <button id="filterEmployeeBtn" class="btn btn-info mt-2">Filtrar</button>
-      </div>
 
 
       <div id="employeeList" class="mt-4">

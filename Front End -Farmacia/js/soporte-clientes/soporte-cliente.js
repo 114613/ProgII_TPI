@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let editingClientId = null;
 
-  const API_URL = 'https://localhost:7258/api/Cliente';
+  const API_URL = 'https://localhost:44361/api/Cliente';
 
   addClientBtn.addEventListener("click", () => {
     clientForm.classList.remove("hidden");
@@ -67,7 +67,25 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error al crear cliente:", error);
     }
   }
+  
+  function actualizarTablaProductos() {
+    const tablaProductos = document.getElementById('tablaProductos');
+    tablaProductos.innerHTML = ''; // Limpiar la tabla antes de volver a cargar los datos
 
+    productosAgregados.forEach((producto, index) => {
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+            <td>${producto.medicamento}</td>
+            <td>${producto.cantidad}</td>
+            <td>${producto.precioUnitario}</td>
+            <td>${producto.descuento}</td>
+            <td>${producto.total}</td>
+            <td><button onclick="editarProducto(${index})">Editar</button></td>
+            <td><button onclick="eliminarProducto(${index})">Eliminar</button></td>
+        `;
+        tablaProductos.appendChild(fila);
+    });
+}
   // Editar un cliente en la API
   async function updateClient(id_cliente, client) {
     try {
@@ -111,14 +129,14 @@ document.addEventListener("DOMContentLoaded", () => {
     clients.forEach(client => {
       const row = document.createElement("tr");
       row.innerHTML = `
-        <td>${client.id_cliente}</td>
+        <td>${client.idCliente}</td>
         <td>${client.nombre}</td>
         <td>${client.apellido}</td>
         <td>${client.documento}</td>
-        <td>${client.obra_social_id}</td>
+        <td>${client.obraSocial.nombre}</td>
         <td>
-          <button class="btn btn-primary btn-sm" onclick="editClient(${client.id_cliente})">Editar</button>
-          <button class="btn btn-danger btn-sm" onclick="deleteClient(${client.id_cliente})">Eliminar</button>
+          <button class="btn btn-primary btn-sm" onclick="editClient(${client.idCliente})">Editar</button>
+          <button class="btn btn-danger btn-sm" onclick="deleteClient(${client.idCliente})">Eliminar</button>
         </td>
       `;
       clientTableBody.appendChild(row);

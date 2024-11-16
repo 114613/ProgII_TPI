@@ -15,274 +15,170 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light ">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Farmaceutica</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../navegacion/nav.empleado.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../alumnos/alumnos.html">Alumnos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../ventas/ventas.html">Ventas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../dashboard/dashboard.html">Dashboard</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Soporte
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="../soportes/clientes.html">Clientes</a></li>
-                  <li><a class="dropdown-item" href="../soportes/medicamentos.html">Medicamentos</a></li>
-                  <li><a class="dropdown-item" href="../soportes/empleados.html">Empleados</a></li>
-                  <li><a class="dropdown-item" href="../soportes/facturacion.html">Facturacion</a></li>
+            <a class="navbar-brand" href="#">Farmaceutica</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../navegacion/nav.empleado.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../alumnos/alumnos.html">Alumnos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../ventas/ventas.html">Ventas</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Soporte
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../soportes/clientes.html">Clientes</a></li>
+                            <li><a class="dropdown-item" href="../soportes/medicamentos.html">Medicamentos</a></li>
+                            <li><a class="dropdown-item" href="../soportes/empleados.html">Empleados</a></li>
+                            <li><a class="dropdown-item" href="../soportes/facturacion.html">Facturación</a></li>
+                        </ul>
+                    </li>
                 </ul>
-              </li>
-            </ul>
-            <button class="btn btn-danger ms-auto" onclick="logout()">Cerrar sesión</button>
-          </div>
+                <button class="btn btn-danger ms-auto" onclick="logout()">Cerrar sesión</button>
+            </div>
         </div>
     </nav>
 
     <!-- Contenido principal -->
-    <div class="container">
+    <div class="container mt-5">
         <div class="text-center">
-            <h1>Grupo de Trabajo</h1>
-            <p>Conoce a los miembros de nuestro equipo</p>
+            <h1 class="title-h1">Grupo de Trabajo</h1>
+            <p class="subtitle-p">Conoce a los miembros de nuestro equipo</p>
         </div>
     
         <div class="row">
-            <div class="col">
+            <div class="col-md-4">
                 <!-- Card 1 -->
-                <div class="card">
+                <div class="card mb-4">
                     <div class="poster">
-                        <img src="../imag/WhatsApp Image 2024-11-13 at 7.53.10 PM.jpeg" alt="Imagen 1">
+                        <img src="../imag/WhatsApp Image 2024-11-13 at 7.53.10 PM.jpeg" alt="Imagen 1" class="card-img-top">
                     </div>
-                    <div class="details">
-                        <div class="title-alumno">Gabriel Yoles Trucco</div>
-                        <div class="subtitle-alumno">Legajo 114613</div>
-                        <div class="tags">
-                            <span class="tag">SQL</span>
-                            <span class="tag">C#</span>
-                            <span class="tag">JavaScript</span>
+                    <div class="card-body">
+                        <h5 class="card-title">Gabriel Yoles Trucco</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Legajo 114613</h6>
+                        <div class="tags mb-2">
+                            <span class="badge bg-primary">SQL</span>
+                            <span class="badge bg-secondary">C#</span>
+                            <span class="badge bg-success">JavaScript</span>
                         </div>
-                        <div class="desc">Gabriel Yoles Trucco es un apasionado del Back-end, con experiencia en dasarrollo de  API.</div>
-                        <div class="cast">
-                            <div class="habilited">Back-end</div>
-                            <ul>
-                                <li><img src="../imag/1-removebg-preview.png" alt="Perfil"></li>
-                                <li><img src="../imag/Tutorial_ Getting Started with the Database Engine - SQL Server.jfif" alt="Perfil"></li>
-                                <li><img src="../imag/12-removebg-preview.png" alt="Perfil"></li>
-                            </ul>
-                        </div>
+                        <p class="card-text">Gabriel Yoles Trucco es un apasionado del Back-end, con experiencia en desarrollo de API.</p>
                     </div>
                 </div>
             </div>
     
-            <div class="col">
+            <div class="col-md-4">
                 <!-- Card 2 -->
-                <div class="card">
+                <div class="card mb-4">
                     <div class="poster">
-                        <img src="imagen2.jpg" alt="Imagen 2">
+                        <img src="../imag/Diseño sin título (19).png" alt="Imagen 2" class="card-img-top">
                     </div>
-                    <div class="details">
-                        <div class="title-alumno">Ana García</div>
-                        <div class="subtitle-alumno">Diseñadora UX/UI</div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                            <span>4.5/5</span>
+                    <div class="card-body">
+                        <h5 class="card-title">Kevin Emanuel Jara</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Legajo 110675</h6>
+                        <div class="tags mb-2">
+                            <span class="badge bg-primary">JavaScript</span>
+                            <span class="badge bg-secondary">Bootstrap</span>
+                            <span class="badge bg-success">HTML</span>
+                            <span class="badge bg-danger">CSS</span>
                         </div>
-                        <div class="tags">
-                            <span class="tag">Figma</span>
-                            <span class="tag">Adobe XD</span>
-                            <span class="tag">Prototipado</span>
-                        </div>
-                        <div class="desc">Ana tiene una gran habilidad para crear interfaces de usuario intuitivas y atractivas.</div>
-                        <div class="cast">
-                            <div class="habilited">Miembro Habilitado</div>
-                            <ul>
-                                <li><img src="perfil1.jpg" alt="Perfil"></li>
-                                <li><img src="perfil2.jpg" alt="Perfil"></li>
-                                <li><img src="perfil3.jpg" alt="Perfil"></li>
-                            </ul>
-                        </div>
+                        <p class="card-text">Kevin Emanuel Jara es un apasionado del Front-End, con experiencia en desarrollo de Interfaces de Usuario.</p>
                     </div>
                 </div>
             </div>
     
-            <div class="col">
+            <div class="col-md-4">
                 <!-- Card 3 -->
-                <div class="card">
+                <div class="card mb-4">
                     <div class="poster">
-                        <img src="imagen3.jpg" alt="Imagen 3">
+                        <img src="../imag/mateo.jpeg" alt="Imagen 3" class="card-img-top">
                     </div>
-                    <div class="details">
-                        <div class="title-alumno">Carlos López</div>
-                        <div class="subtitle-alumno">Backend Developer</div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <span>5/5</span>
+                    <div class="card-body">
+                        <h5 class="card-title">Mateo Nicolás Capurro</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Legajo 114261</h6>
+                        <div class="tags mb-2">
+                            <span class="badge bg-primary">SQL</span>
+                            <span class="badge bg-secondary">C#</span>
+                            <span class="badge bg-success">JavaScript</span>
                         </div>
-                        <div class="tags">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">MongoDB</span>
-                        </div>
-                        <div class="desc">Carlos se especializa en crear APIs robustas y sistemas backend escalables.</div>
-                        <div class="cast">
-                            <div class="habilited">Miembro Habilitado</div>
-                            <ul>
-                                <li><img src="perfil1.jpg" alt="Perfil"></li>
-                                <li><img src="perfil2.jpg" alt="Perfil"></li>
-                                <li><img src="perfil3.jpg" alt="Perfil"></li>
-                            </ul>
-                        </div>
+                        <p class="card-text">Mateo se especializa soporte de la Creacion de las APIS.</p>
                     </div>
                 </div>
             </div>
-    
-            <div class="col">
-                <!-- Card 4 -->
-                <div class="card">
+            <div class="col-md-4">
+                <!-- Card 3 -->
+                <div class="card mb-4">
                     <div class="poster">
-                        <img src="imagen4.jpg" alt="Imagen 4">
+                        <img src="../imag/Mateo adamo.jpeg" alt="Imagen 3" class="card-img-top">
                     </div>
-                    <div class="details">
-                        <div class="title-alumno">Lucía Martínez</div>
-                        <div class="subtitle-alumno">Product Manager</div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="fas fa-star-half-alt"></i>
-                            <span>4/5</span>
+                    <div class="card-body">
+                        <h5 class="card-title">Mateo Adamo</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Legajo 405915</h6>
+                        <div class="tags mb-2">
+                            <span class="badge bg-primary">SQL</span>
+                            <span class="badge bg-secondary">C#</span>
+                            <span class="badge bg-success">JavaScript</span>
                         </div>
-                        <div class="tags">
-                            <span class="tag">Agile</span>
-                            <span class="tag">Scrum</span>
-                            <span class="tag">Jira</span>
-                        </div>
-                        <div class="desc">Lucía tiene una visión clara para el desarrollo de productos, guiando equipos hacia el éxito.</div>
-                        <div class="cast">
-                            <div class="habilited">Miembro Habilitado</div>
-                            <ul>
-                                <li><img src="perfil1.jpg" alt="Perfil"></li>
-                                <li><img src="perfil2.jpg" alt="Perfil"></li>
-                                <li><img src="perfil3.jpg" alt="Perfil"></li>
-                            </ul>
-                        </div>
+                        <p class="card-text">Mateo se especializa soporte de la Creacion de las APIS.</p>
                     </div>
                 </div>
             </div>
-    
-            <div class="col">
-                <!-- Card 5 -->
-                <div class="card">
+            <div class="col-md-4">
+                <!-- Card 3 -->
+                <div class="card mb-4">
                     <div class="poster">
-                        <img src="imagen5.jpg" alt="Imagen 5">
+                        <img src="../imag/Joaquin.jpeg" alt="Imagen 3" class="card-img-top">
                     </div>
-                    <div class="details">
-                        <div class="title-alumno">José Martínez</div>
-                        <div class="subtitle-alumno">SEO Specialist</div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="fas fa-star"></i>
-                            <span>4.5/5</span>
+                    <div class="card-body">
+                        <h5 class="card-title">Joaquin Utrera</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Legajo 114289</h6>
+                        <div class="tags mb-2">
+                            <span class="badge bg-primary">SQL</span>
+                            <span class="badge bg-secondary">C#</span>
+                            <span class="badge bg-success">JavaScript</span>
                         </div>
-                        <div class="tags">
-                            <span class="tag">SEO</span>
-                            <span class="tag">Google Analytics</span>
-                            <span class="tag">Marketing Digital</span>
-                        </div>
-                        <div class="desc">José es experto en optimización web y estrategias de marketing digital.</div>
-                        <div class="cast">
-                            <div class="habilited">Miembro Habilitado</div>
-                            <ul>
-                                <li><img src="perfil1.jpg" alt="Perfil"></li>
-                                <li><img src="perfil2.jpg" alt="Perfil"></li>
-                                <li><img src="perfil3.jpg" alt="Perfil"></li>
-                            </ul>
-                        </div>
+                        <p class="card-text">Joaquin Utrera es un apasionado del Back-end, con experiencia en desarrollo de API.</p>
                     </div>
-                </div>
+                </div>    
             </div>
-    
-            <div class="col">
-                <!-- Card 6 -->
-                <div class="card">
+            <div class="col-md-4">
+                <!-- Card 3 -->
+                <div class="card mb-4">
                     <div class="poster">
-                        <img src="imagen6.jpg" alt="Imagen 6">
+                        <img src="../imag/Cristian.jpeg" alt="Imagen 3" class="card-img-top">
                     </div>
-                    <div class="details">
-                        <div class="title-alumno">Rosa Gómez</div>
-                        <div class="subtitle-alumno">Community Manager</div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                            <span>4.2/5</span>
+                    <div class="card-body">
+                        <h5 class="card-title">Cristhian choque Martinez</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Legajo 112932</h6>
+                        <div class="tags mb-2">
+                            <span class="badge bg-primary">JavaScript</span>
+                            <span class="badge bg-success">HTML</span>
+                            <span class="badge bg-danger">CSS</span>
                         </div>
-                        <div class="tags">
-                            <span class="tag">Social Media</span>
-                            <span class="tag">Facebook Ads</span>
-                            <span class="tag">Instagram</span>
-                        </div>
-                        <div class="desc">Rosa es experta en crear campañas de marketing en redes sociales.</div>
-                        <div class="cast">
-                            <div class="habilited">Miembro Habilitado</div>
-                            <ul>
-                                <li><img src="perfil1.jpg" alt="Perfil"></li>
-                                <li><img src="perfil2.jpg" alt="Perfil"></li>
-                                <li><img src="perfil3.jpg" alt="Perfil"></li>
-                            </ul>
-                        </div>
+                        <p class="card-text">Cristhian choque Martinez es un apasionado del Front-End, con experiencia en desarrollo de API.</p>
                     </div>
-                </div>
+                </div>    
             </div>
-    
-            <div class="col">
-                <!-- Card 7 -->
-                <div class="card">
-                    <div class="poster">
-                        <img src="imagen7.jpg" alt="Imagen 7">
-                    </div>
-                    <div class="details">
-                        <div class="title-alumno">Martín Pérez</div>
-                        <div class="subtitle-alumno">Data Scientist</div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <span>5/5</span>
-                        </div>
-                        <div class="tags">
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">AI</span>
-                        </div>
-                        <div class="desc">Martín se especializa en el análisis de datos y el uso de inteligencia artificial.</div>
-                        <div class="cast">
-                            <div class="habilited">Miembro Habilitado</div>
-                            <ul>
-                                <li><img src="perfil1.jpg" alt="Perfil"></li>
-                                <li><img src="perfil2.jpg" alt="Perfil"></li>
-                                <li><img src="perfil3.jpg" alt="Perfil"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- Additional cards for other team members can follow this pattern -->
         </div>
     </div>
-    
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Scripts personalizados -->
-    <script src="../js/login/login.js"></script>
 
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="../js/login/login.js"></script>
 </body>
 </html>
